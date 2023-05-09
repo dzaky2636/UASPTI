@@ -2,21 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>Quiz Game</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <nav class="bg-gray-800">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="hidden sm:block sm:ml-6">
+              <div class="flex space-x-4">
+                <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Quiz</h1>
+    </header>
+    <main>
+      <section class="question">
+        <h2>Question 1</h2>
+        <p>What is the capital of France?</p>
+        <ul>
+          <li><input type="radio" name="q1" value="a" /><label>London</label></li>
+          <li><input type="radio" name="q1" value="b" /><label>Paris</label></li>
+          <li><input type="radio" name="q1" value="c" /><label>Moscow</label></li>
+          <li><input type="radio" name="q1" value="d" /><label>Madrid</label></li>
+        </ul>
+      </section>
+      <section class="question">
+        <h2>Question 2</h2>
+        <p>Who wrote the Harry Potter series?</p>
+        <ul>
+          <li><input type="radio" name="q2" value="a" /><label>Stephen King</label></li>
+          <li><input type="radio" name="q2" value="b" /><label>J.K. Rowling</label></li>
+          <li><input type="radio" name="q2" value="c" /><label>Suzanne Collins</label></li>
+          <li><input type="radio" name="q2" value="d" /><label>George R.R. Martin</label></li>
+        </ul>
+      </section>
+      <button>Submit</button>
+    </main>
+    <footer>
+      <p>&copy; 2023 Quiz</p>
+    </footer>
+
+    <script src="../src/index.js"></script>
   </body>
 </html>
