@@ -1,4 +1,7 @@
-// import logo from "./logo.svg";
-// import "./App.css";
+import "./style/App.css";
 
-// export default App;
+function App() {
+  return <div className="container"></div>;
+}
+
+export default App;
