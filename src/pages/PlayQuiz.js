@@ -1,6 +1,6 @@
 import { Navbar } from "../component/Navbar"
-import { HeroPlay } from "../component/HeroPlay"
-import { SelectPlayMode } from "../component/SelectPlayMode"
+import { PlayHero } from "../component/PlayHero"
+import { PlayModeSelect } from "../component/PlayModeSelect"
 
 const play = {
     timer: 15,
@@ -11,8 +11,8 @@ export function PlayQuiz(){
     return(
         <div className="bg-white">
             <Navbar />
-            <HeroPlay />
-            <SelectPlayMode />
+            <PlayHero />
+            <PlayModeSelect />
         </div>
     )
 }
