@@ -15,24 +15,35 @@ const navigation = [
 export function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	return (
-		<header className="fixed inset-x-0 top-0 z-50 bg-white">
+		<header className="fixed inset-x-0 top-0 z-50 bg-yellow-300">
 			{/* Desktop */}
-			<nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+			<nav
+				className="flex items-center justify-between p-6 lg:px-8"
+				aria-label="Global">
 				{/* Logo */}
 				<div className="flex lg:flex-1">
-					<img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+					<img
+						className="h-8 w-auto"
+						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+						alt=""
+					/>
 				</div>
 				{/* Button hamburger */}
 				<div className="flex lg:hidden">
-					<button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" onClick={() => setMobileMenuOpen(true)}>
-						<span className="sr-only">Open main menu</span>
+					<button
+						type="button"
+						className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-900"
+						onClick={() => setMobileMenuOpen(true)}>
 						<Bars3Icon className="h-6 w-6" aria-hidden="true" />
 					</button>
 				</div>
 				{/* Link */}
 				<div className="hidden lg:flex lg:gap-x-12">
 					{navigation.map((item) => (
-						<Link key={item.name} to={item.to} className="text-base font-semibold leading-6 text-gray-900">
+						<Link
+							key={item.name}
+							to={item.to}
+							className="text-xl font-semibold leading-6 text-gray-900">
 							{item.name}
 						</Link>
 					))}
@@ -45,12 +56,19 @@ export function Navbar() {
 				</div>
 			</nav>
 			{/* Mobile */}
-			<Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+			<Dialog
+				as="div"
+				className="lg:hidden"
+				open={mobileMenuOpen}
+				onClose={setMobileMenuOpen}>
 				<div className="fixed inset-0 z-50" />
-				<Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+				<Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-yellow-200 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
 					{/* Tombol exit menu navbar mobile */}
 					<div className="flex items-right justify-end">
-						<button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700" onClick={() => setMobileMenuOpen(false)}>
+						<button
+							type="button"
+							className="-m-2.5 rounded-md p-2.5 text-gray-700"
+							onClick={() => setMobileMenuOpen(false)}>
 							<XMarkIcon className="h-6 w-6" aria-hidden="true" />
 						</button>
 					</div>
@@ -58,13 +76,18 @@ export function Navbar() {
 						<div className="-my-6 divide-y divide-gray-500/10">
 							<div className="space-y-2 py-6">
 								{navigation.map((item) => (
-									<Link key={item.name} to={item.to} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+									<Link
+										key={item.name}
+										to={item.to}
+										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
 										{item.name}
 									</Link>
 								))}
 							</div>
 							<div className="py-6">
-								<a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+								<a
+									href="#"
+									className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
 									Log in
 								</a>
 							</div>
