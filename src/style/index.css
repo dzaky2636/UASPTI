@@ -2,66 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@use postcss-preset-env {
-  stage: 0;
-}
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap");
-.navigation {
-  border-radius: 25px;
-  height: fit-content;
-  display: inline-flex;
-  background-color: rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  align-items: center;
-}
-.dalnav {
-  list-style: none;
-  color: white;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 12px 16px;
-  margin: 0 8px;
-  position: relative;
-  cursor: pointer;
-  white-space: nowrap;
-  &::before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    transition: 0.2s;
-    border-radius: 25px;
-  }
-  &:hover {
-    &::before {
-      background: linear-gradient(to bottom, #e8edec, #d2d1d3);
-      box-shadow: 0px 3px 20px 0px black;
-      transform: scale(1.2);
-    }
-    color: black;
-  }
-}
-.judulh1 {
-  font-size: 10vw;
-  text-shadow: 4px 4px 0px #3f7fbf;
-  mix-blend-mode: screen;
-  animation: fadeIn 2.5s linear forwards;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-.para {
-  text-shadow: 0 1px #8da1ff, -1px 0 #c0cbff, -1px 2px #8da1ff, -2px 1px #c0cbff, -2px 3px #8da1ff, -3px 2px #c0cbff, -3px 4px #8da1ff, -4px 3px #c0cbff, -4px 5px #8da1ff, -5px 4px #c0cbff, -5px 6px #8da1ff, -6px 5px #c0cbff,
-    -6px 7px #8da1ff, -7px 6px #c0cbff, -7px 8px #8da1ff, -8px 7px #c0cbff;
-  text-align: center;
+body {
+  margin: 0;
+  font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
