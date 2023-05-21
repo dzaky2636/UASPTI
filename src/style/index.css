@@ -3,13 +3,13 @@
 @import "tailwindcss/utilities";
 
 body {
-	margin: 0;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: #7ec7d0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #7ec7d0;
 }
 
 .fUnbounded {
-	font-family: "Unbounded", cursive;
+  font-family: "Unbounded", cursive;
 }
