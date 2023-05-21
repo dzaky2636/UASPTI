@@ -6,8 +6,6 @@ import "../style/index.css";
 
 const navigation = [
   { name: "Home", to: "/" },
-  { name: "Play", to: "/play" },
-  { name: "How To", to: "/howto" },
   { name: "Leaderboard", to: "/leaderboard" },
   { name: "About Us", to: "/aboutus" },
 ];
