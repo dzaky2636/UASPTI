@@ -2,12 +2,17 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--secondary) var(--primary);
+}
+
 body {
 	margin: 0;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: #7ec7d0;
+	background-color: #caf0f8;
 }
 
 .fUnbounded {
