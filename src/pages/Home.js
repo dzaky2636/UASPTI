@@ -1,29 +1,39 @@
 import { Hero } from "../component/Hero";
 import { Navbar } from "../component/Navbar";
 import { PlayModeCard } from "../component/PlayModeCard";
+import { FlexboxBox } from "../component/FlexboxBox";
+import quizpng from "../assets/quiz.png";
 
 export function Home() {
 	return (
 		<div>
 			<Navbar />
 			{/* Flexbox grid */}
-			<div className="mx-2">
-				<div className=" bg-amber-300 rounded-lg mt-[5.5rem]">
-					<Hero />
-				</div>
-				<div className="flex flex-col gap-2 lg:flex-row my-2">
-					<div className="w-full lg:w-1/3 bg-amber-300 rounded-lg py-28 px-14">
-						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-							Fun Fact
-						</h1>
+			<div className="container mx-auto">
+				<div className="mx-2 text-white">
+					{/* Hero */}
+					<FlexboxBox content={<Hero />} className="mt-[5.2rem]" />
+					<div className="flex flex-col lg:flex-row my-1 gap-1 flex-nowrap overflow-hidden">
+						<FlexboxBox
+							content={
+								<div className="p-10 text-center">
+									<div>
+										<div className="text-3xl font-bold">Did you know?</div>
+									</div>
+									<div className="text-3xl font-bold italic pt-10">
+										Jakarta merupakan ibukota Indonesia!
+									</div>
+									<div>
+										<img
+											className="w-4/5 md:w-36 float-right md:absolute right-5 bottom-2/3"
+											src={quizpng}></img>
+									</div>
+								</div>
+							}
+							className="flex-none w-full lg:w-1/3 h-96 relative"
+						/>
 					</div>
-					<h1 className="w-full lg:w-4/6 bg-amber-300 rounded-lg py-28 px-14">
-						<PlayModeCard />
-						<PlayModeCard />
-						<PlayModeCard />
-					</h1>
 				</div>
-				<div className="md:col-span-4 bg-amber-300 rounded-lg"></div>
 			</div>
 		</div>
 	);
