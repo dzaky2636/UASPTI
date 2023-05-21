@@ -26,6 +26,9 @@ export function Navbar() {
             src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
             alt=""
           />
+          <span class="relative ms-4 bottom-[0.2rem] self-center text-2xl font-semibold whitespace-nowrap text-white">
+            Quiz Game
+          </span>
         </div>
         {/* Button hamburger */}
         <div className="flex lg:hidden">
@@ -64,7 +67,7 @@ export function Navbar() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-yellow-200 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-cyan-600 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           {/* Tombol exit menu navbar mobile */}
           <div className="flex items-right justify-end">
             <button
