@@ -1,104 +1,345 @@
 import { Navbar } from "../component/Navbar";
 import { Fragment, useState } from "react";
+import avatar from "../assets/avatar.png";
+
 import {
-	Accordion,
-	AccordionHeader,
-	AccordionBody,
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
 } from "@material-tailwind/react";
 import { Footer } from "../component/Footer";
 
 function Icon({ id, open }) {
-	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			className={`${
-				id === open ? "rotate-180" : ""
-			} h-5 w-5 transition-transform`}
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-			strokeWidth={2}>
-			<path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-		</svg>
-	);
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={`${
+        id === open ? "rotate-180" : ""
+      } h-5 w-5 transition-transform`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  );
 }
 
 export function AboutUs() {
-	const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(0);
 
-	const handleOpen = (value) => {
-		setOpen(open === value ? 0 : value);
-	};
+  const handleOpen = (value) => {
+    setOpen(open === value ? 0 : value);
+  };
 
-	return (
-		<div className="text-white">
-			<Navbar />
-			<div className="bg-gradient-to-b from-[#7ec7d0] to-blue-400 pb-64">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-					<path
-						fill="#5E60CE"
-						fill-opacity="1"
-						d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,160C672,192,768,224,864,218.7C960,213,1056,171,1152,165.3C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-				</svg>
-				<div className="bg-[#5E60CE] -mt-1">
-					<div className="container mx-auto relative bottom-20">
-						{/* Accordion */}
-						<div className="py-10 text-center">
-							<div className="text-7xl font-bold">FAQ</div>
-						</div>
-						<div className="mx-32 text-white">
-							<Fragment>
-								<Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-									<AccordionHeader
-										className="bg-[#6930C3] border-2 border-[#7400B8] p-6 rounded-t-xl"
-										onClick={() => handleOpen(1)}>
-										What is Material Tailwind?
-									</AccordionHeader>
-									<AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white text-xl">
-										We&apos;re not always in the position that we want to be at.
-										We&apos;re constantly growing. We&apos;re constantly making
-										mistakes. We&apos;re constantly trying to express ourselves
-										and actualize our dreams.
-									</AccordionBody>
-								</Accordion>
-								<Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-									<AccordionHeader
-										className="bg-[#6930C3] border-2 border-[#7400B8] p-6"
-										onClick={() => handleOpen(2)}>
-										What is Material Tailwind?
-									</AccordionHeader>
-									<AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white text-xl">
-										We&apos;re not always in the position that we want to be at.
-										We&apos;re constantly growing. We&apos;re constantly making
-										mistakes. We&apos;re constantly trying to express ourselves
-										and actualize our dreams.
-									</AccordionBody>
-								</Accordion>
-								<Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-									<AccordionHeader
-										className="bg-[#6930C3] border-2 border-[#7400B8] p-6"
-										onClick={() => handleOpen(3)}>
-										What is Material Tailwind?
-									</AccordionHeader>
-									<AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white rounded-b-xl text-xl">
-										We&apos;re not always in the position that we want to be at.
-										We&apos;re constantly growing. We&apos;re constantly making
-										mistakes. We&apos;re constantly trying to express ourselves
-										and actualize our dreams.
-									</AccordionBody>
-								</Accordion>
-							</Fragment>
-						</div>
-					</div>
-				</div>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-					<path
-						fill="#5E60CE"
-						fill-opacity="1"
-						d="M0,64L48,64C96,64,192,64,288,80C384,96,480,128,576,149.3C672,171,768,181,864,170.7C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-				</svg>
-			</div>
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="text-white">
+      <Navbar />
+
+      {/* Team Section */}
+
+      <div class="flex items-center justify-center min-h-screeny py-5">
+        <div class="flex flex-col">
+          <span class="text-center font-bold my-10 opacity-30">
+            <hr class="my-4"></hr>
+            <a
+              href="https://egoistdeveloper.github.io/twcss-to-sass-playground/"
+              target="_blank"
+              class="text-blue-600"></a>
+          </span>
+
+          <div class="flex flex-col mt-8 ">
+            <div class="container max-w-7xl px-4">
+              <div class="flex flex-wrap justify-center text-center mb-12">
+                <div class="w-full lg:w-6/12 px-4">
+                  <h1 class="text-black text-4xl font-bold mb-8">Our Team</h1>
+                  <p class="text-gray-700 text-lg font-normal">Group 2</p>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap">
+                <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                  <div class="flex flex-col">
+                    <a href="#" class="mx-auto">
+                      <img
+                        class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                        src={avatar}></img>
+                    </a>
+
+                    <div class="text-center mt-6">
+                      <h1 class="text-gray-900 text-xl font-bold mb-1">
+                        Batara Hotdo Horas Simbolon
+                      </h1>
+
+                      <div class="text-gray-700 font-normal mb-2">
+                        00000078626
+                      </div>
+
+                      <div
+                        class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300">
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                          <i class="mdi mdi-github text-indigo-500 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                          <i class="mdi mdi-discord text-blue-300 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+                          <i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                  <div class="flex flex-col">
+                    <a href="#" class="mx-auto">
+                      <img
+                        class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                        src={avatar}></img>
+                    </a>
+
+                    <div class="text-center mt-6">
+                      <h1 class="text-gray-900 text-xl font-bold mb-10">
+                        Efri Ramadhan
+                      </h1>
+
+                      <div class="text-gray-700 font-normal mb-2">
+                        00000078662
+                      </div>
+
+                      <div
+                        class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300">
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                          <i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                          <i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+                          <i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                  <div class="flex flex-col">
+                    <a href="#" class="mx-auto">
+                      <img
+                        class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                        src={avatar}></img>
+                    </a>
+
+                    <div class="text-center mt-6">
+                      <h1 class="text-gray-900 text-xl font-bold mb-4">
+                        Raphael Dikstra Satya Prameswara
+                      </h1>
+
+                      <div class="text-gray-700 font-normal mb-2">
+                        00000078564
+                      </div>
+
+                      <div
+                        class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300">
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                          <i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                          <i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+                          <i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                  <div class="flex flex-col">
+                    <a href="#" class="mx-auto">
+                      <img
+                        class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                        src={avatar}></img>
+                    </a>
+
+                    <div class="text-center mt-6">
+                      <h1 class="text-gray-900 text-xl font-bold mb-12">
+                        Dzaky Fatur Rahman
+                      </h1>
+
+                      <div class="text-gray-700 font-normal mb-2">
+                        00000089614
+                      </div>
+
+                      <div
+                        class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300">
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                          <i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                          <i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+                          <i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lgpx-4">
+                  <div class="flex flex-col">
+                    <a href="#" class="mx-auto">
+                      <img
+                        class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                        src={avatar}></img>
+                    </a>
+
+                    <div class="text-center mt-6">
+                      <h1 class="text-gray-900 text-xl font-bold mb-1">
+                        Axel Reginald Wiranto
+                      </h1>
+
+                      <div class="text-gray-700 font-normal mb-2">
+                        00000078456
+                      </div>
+
+                      <div
+                        class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300">
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                          <i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                          <i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+                          <i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-b from-[#7ec7d0] to-blue-400 pb-64">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#5E60CE"
+            fill-opacity="1"
+            d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,160C672,192,768,224,864,218.7C960,213,1056,171,1152,165.3C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <div className="bg-[#5E60CE] -mt-1">
+          <div className="container mx-auto relative bottom-20">
+            {/* Accordion */}
+            <div className="py-10 text-center">
+              <div className="text-7xl font-bold">FAQ</div>
+            </div>
+            <div className="mx-32 text-white">
+              <Fragment>
+                <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
+                  <AccordionHeader
+                    className="bg-[#6930C3] border-2 border-[#7400B8] p-6 rounded-t-xl"
+                    onClick={() => handleOpen(1)}>
+                    What is Material Tailwind?
+                  </AccordionHeader>
+                  <AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white text-xl">
+                    We&apos;re not always in the position that we want to be at.
+                    We&apos;re constantly growing. We&apos;re constantly making
+                    mistakes. We&apos;re constantly trying to express ourselves
+                    and actualize our dreams.
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
+                  <AccordionHeader
+                    className="bg-[#6930C3] border-2 border-[#7400B8] p-6"
+                    onClick={() => handleOpen(2)}>
+                    What is Material Tailwind?
+                  </AccordionHeader>
+                  <AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white text-xl">
+                    We&apos;re not always in the position that we want to be at.
+                    We&apos;re constantly growing. We&apos;re constantly making
+                    mistakes. We&apos;re constantly trying to express ourselves
+                    and actualize our dreams.
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
+                  <AccordionHeader
+                    className="bg-[#6930C3] border-2 border-[#7400B8] p-6"
+                    onClick={() => handleOpen(3)}>
+                    What is Material Tailwind?
+                  </AccordionHeader>
+                  <AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white rounded-b-xl text-xl">
+                    We&apos;re not always in the position that we want to be at.
+                    We&apos;re constantly growing. We&apos;re constantly making
+                    mistakes. We&apos;re constantly trying to express ourselves
+                    and actualize our dreams.
+                  </AccordionBody>
+                </Accordion>
+              </Fragment>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#5E60CE"
+            fill-opacity="1"
+            d="M0,64L48,64C96,64,192,64,288,80C384,96,480,128,576,149.3C672,171,768,181,864,170.7C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+        </svg>
+      </div>
+      <Footer />
+    </div>
+  );
 }
