@@ -33,7 +33,8 @@ export function AboutUs() {
 	return (
 		<div className="text-white flex flex-col justify-between min-h-screen">
 			<Navbar />
-			<div className="pb-10">
+			<div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
+			<div className="pb-10 scale-100">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 					<path
 						fill="#5E60CE"

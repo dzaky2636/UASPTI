@@ -29,3 +29,14 @@ body {
 	mix-blend-mode: darken;
 	position: absolute;
 }
+
+.bgPage {
+	background-image: url("../assets/bg.jpg");
+	opacity: 6%;
+	border-radius: 10%;
+	background-size: 100%;
+	mix-blend-mode: darken;
+	background-repeat: repeat;
+	position: absolute;
+	box-shadow: 0 0 30px 30px white inset;
+}

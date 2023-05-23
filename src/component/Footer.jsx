@@ -1,6 +1,6 @@
 export function Footer() {
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col scale-100">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
 					fill="#5E60CE"
