@@ -22,8 +22,8 @@ export function Footer() {
                 </span>
               </div>
               <div>
-                <span class="text-md lg:text-1xl font-semibold ">
-                  © 2023 Group 2™. All Rights Reserved.
+                <span class="inline lg:hidden text-md lg:text-2xl font-semibold ">
+                  © 2023 Kelompok 2™
                 </span>
               </div>
             </div>
