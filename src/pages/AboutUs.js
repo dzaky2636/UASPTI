@@ -34,7 +34,7 @@ export function AboutUs() {
   return (
     <div className="text-white">
       <Navbar />
-      <div className="bg-gradient-to-b from-[#7ec7d0] to-blue-400 pb-64">
+      <div className=" pb-64">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#5E60CE"
