@@ -274,13 +274,16 @@ export function AboutUs() {
 			</div>
 
 			<div className="bg-gradient-to-b from-[#7ec7d0] to-blue-400 pb-64">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-					<path
-						fill="#5E60CE"
-						fill-opacity="1"
-						d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,160C672,192,768,224,864,218.7C960,213,1056,171,1152,165.3C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-				</svg>
-				<div className="bg-[#5E60CE] -mt-1">
+				<div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
+				<div className="scale-100">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+						<path
+							fill="#5E60CE"
+							fill-opacity="1"
+							d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,160C672,192,768,224,864,218.7C960,213,1056,171,1152,165.3C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+					</svg>
+				</div>
+				<div className="bg-[#5E60CE] -mt-1 scale-100">
 					<div className="container mx-auto relative bottom-20">
 						{/* Accordion */}
 						<div className="py-10 text-center">
