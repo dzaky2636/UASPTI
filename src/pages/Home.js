@@ -150,7 +150,7 @@ export function Home() {
 						fill-opacity="1"
 						d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
 				</svg>
-				<div className="bg-[#5E60CE] -mt-1">
+				<div className="bg-[#5E60CE] -mt-1 pb-4">
 					<div className="container mx-auto">
 						{/* Random Trivia */}
 						<div className="py-20 text-center">
@@ -216,7 +216,7 @@ export function Home() {
 				</div>
 			</div>
 			{/* Bagian 3 */}
-			<div className="relative bottom-[30rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
+			<div className="relative bottom-[30.5rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
 				<div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
 				<div className="scale-100">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
