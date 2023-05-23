@@ -2,6 +2,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo/logo.png";
 import "../style/index.css";
 
 const navigation = [
@@ -13,22 +14,15 @@ const navigation = [
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-cyan-600">
+    <header className="fixed inset-x-0 top-0 z-50 bg-[#30a2a9]">
       {/* Desktop */}
       <nav
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         {/* Logo */}
-        <div className="flex lg:flex-1">
-          <img
-            className="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
-          <span class="relative ms-4 bottom-[0.2rem] self-center text-2xl font-semibold whitespace-nowrap text-white">
-            Quiz Game
-          </span>
+        <div className="flex xl:flex-1">
+          <img className="h-8 w-auto" src={logo} alt="Logo" />
         </div>
         {/* Button hamburger */}
         <div className="flex lg:hidden">
