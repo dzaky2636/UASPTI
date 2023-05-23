@@ -28,7 +28,7 @@ export function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -40,7 +40,7 @@ export function Navbar() {
             <Link
               key={item.name}
               to={item.to}
-              className="text-xl font-semibold leading-6 text-black"
+              className="text-xl font-semibold leading-6 text-white"
             >
               {item.name}
             </Link>
@@ -48,8 +48,8 @@ export function Navbar() {
         </div>
         {/* Kanan */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-black">
-            Play <span aria-hidden="true">&rarr;</span>
+          <a href="#" className="text-sm font-semibold leading-6 text-white">
+            Log in <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
@@ -62,11 +62,12 @@ export function Navbar() {
       >
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#30a2a9] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+          <div className="bgNavbar w-full h-full"></div>
           {/* Tombol exit menu navbar mobile */}
           <div className="flex items-right justify-end">
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-black hover:bg-[#ffdf52]"
+              className="-m-2.5 rounded-md p-2.5 text-white hover:text-black hover:bg-[#fedf51]"
               onClick={() => setMobileMenuOpen(false)}
             >
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -79,7 +80,7 @@ export function Navbar() {
                   <Link
                     key={item.name}
                     to={item.to}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-[#ffdf52]"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-black hover:bg-[#fedf51]"
                   >
                     {item.name}
                   </Link>
@@ -88,7 +89,7 @@ export function Navbar() {
               <div className="py-6">
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-black hover:bg-[#ffdf52]"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-black hover:bg-[#fedf51]"
                 >
                   Log in
                 </a>
