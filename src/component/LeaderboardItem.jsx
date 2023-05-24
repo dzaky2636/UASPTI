@@ -4,9 +4,9 @@ export function LeaderboardItem(props) {
 			<div className="text-lg lg:text-xl font-bold content-center my-auto text-white w-4">
 				{props.no}
 			</div>
-			<div className="flex w-16 lg:w-20 h-16 lg:h-20 rounded-full border-4 border-white bg-slate-400">
-				<div className="text-4xl lg:text-5xl mx-auto my-auto">{props.icon}</div>
-			</div>
+			<img
+				src="https://www.w3schools.com/html/pic_trulli.jpg"
+				className="flex w-16 lg:w-20 h-16 lg:h-20 rounded-full border-4 border-white bg-slate-400"></img>
 			<div className="text-lg lg:text-xl font-bold my-auto text-white">
 				{props.nama}
 			</div>
