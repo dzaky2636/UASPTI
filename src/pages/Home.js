@@ -2,6 +2,7 @@ import quizpng from "../assets/quiz.png";
 import { FlexboxBox } from "../component/FlexboxBox";
 import { Footer } from "../component/Footer";
 import { Hero } from "../component/Hero";
+import { HowTo } from "../component/HowTo";
 import { Navbar } from "../component/Navbar";
 
 export function Home() {
@@ -21,119 +22,8 @@ export function Home() {
               <div className="py-20 text-center">
                 <div className="text-7xl font-bold">How To?</div>
               </div>
-              <div className="flex flex-col lg:flex-row gap-2">
-                <FlexboxBox
-                  content={
-                    <div className="p-7 text-center h-full">
-                      <div className="flex h-1/3">
-                        <img className="h-24" src={quizpng}></img>
-                        <div className="text-3xl font-bold p-6">
-                          Did you know?
-                        </div>
-                      </div>
-                      <div className="h-2/3 content-center align-middle pt-10">
-                        <div className="text-3xl font-bold italic">
-                          Jakarta merupakan ibukota Indonesia!
-                        </div>
-                      </div>
-                    </div>
-                  }
-                  className="w-full lg:w-1/4"
-                />
-                <FlexboxBox
-                  content={
-                    <div className="p-7 text-center h-full">
-                      <div className="flex h-1/3">
-                        <img className="h-24" src={quizpng}></img>
-                        <div className="text-3xl font-bold p-6">
-                          Did you know?
-                        </div>
-                      </div>
-                      <div className="h-2/3 content-center align-middle pt-10">
-                        <div className="text-3xl font-bold italic">
-                          Jakarta merupakan ibukota Indonesia!
-                        </div>
-                      </div>
-                    </div>
-                  }
-                  className="w-full lg:w-3/4"
-                />
-              </div>
-              <div className="flex flex-col lg:flex-row gap-2 mt-2">
-                <FlexboxBox
-                  content={
-                    <div className="p-7 text-center h-full">
-                      <div className="flex h-1/3">
-                        <img className="h-24" src={quizpng}></img>
-                        <div className="text-3xl font-bold p-6">
-                          Did you know?
-                        </div>
-                      </div>
-                      <div className="h-2/3 content-center align-middle pt-10">
-                        <div className="text-3xl font-bold italic">
-                          Jakarta merupakan ibukota Indonesia!
-                        </div>
-                      </div>
-                    </div>
-                  }
-                  className="w-full lg:w-3/4"
-                />
-                <FlexboxBox
-                  content={
-                    <div className="p-7 text-center h-full">
-                      <div className="flex h-1/3">
-                        <img className="h-24" src={quizpng}></img>
-                        <div className="text-3xl font-bold p-6">
-                          Did you know?
-                        </div>
-                      </div>
-                      <div className="h-2/3 content-center align-middle pt-10">
-                        <div className="text-3xl font-bold italic">
-                          Jakarta merupakan ibukota Indonesia!
-                        </div>
-                      </div>
-                    </div>
-                  }
-                  className="w-full lg:w-1/4"
-                />
-              </div>
-              <div className="flex flex-col lg:flex-row gap-2 mt-2">
-                <FlexboxBox
-                  content={
-                    <div className="p-7 text-center h-full">
-                      <div className="flex h-1/3">
-                        <img className="h-24" src={quizpng}></img>
-                        <div className="text-3xl font-bold p-6">
-                          Did you know?
-                        </div>
-                      </div>
-                      <div className="h-2/3 content-center align-middle pt-10">
-                        <div className="text-3xl font-bold italic">
-                          Jakarta merupakan ibukota Indonesia!
-                        </div>
-                      </div>
-                    </div>
-                  }
-                  className="w-full lg:w-1/2"
-                />
-                <FlexboxBox
-                  content={
-                    <div className="p-7 text-center h-full">
-                      <div className="flex h-1/3">
-                        <img className="h-24" src={quizpng}></img>
-                        <div className="text-3xl font-bold p-6">
-                          Did you know?
-                        </div>
-                      </div>
-                      <div className="h-2/3 content-center align-middle pt-10">
-                        <div className="text-3xl font-bold italic">
-                          Jakarta merupakan ibukota Indonesia!
-                        </div>
-                      </div>
-                    </div>
-                  }
-                  className="w-full lg:w-1/2"
-                />
+              <div className="VideoPlayer relative h-0 w-full pb-[56.25%]">
+                <HowTo />
               </div>
             </div>
             {/* Select Play */}
@@ -141,7 +31,7 @@ export function Home() {
         </div>
       </div>
       {/* Bagian 2 */}
-      <div className="flex flex-col relative bottom-[30rem] scale-100">
+      <div className="flex flex-col relative bottom-[20rem] scale-100">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#5E60CE"

@@ -16,13 +16,13 @@ export function Hero() {
               href="#"
               className="rounded-md bg-[#00787e] px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:text-black hover:bg-[#fedf52]"
             >
-              Get started
+              Play the Game
             </a>
             <a
               href="#"
               className="rounded-md bg-[#00787e] px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:text-black hover:bg-[#fedf51]"
             >
-              Learn more <span aria-hidden="true">→</span>
+              How to Play
             </a>
           </div>
         </div>
