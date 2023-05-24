@@ -117,6 +117,7 @@ export function AboutUs() {
 												00000078662
 											</div>
 
+<<<<<<< Updated upstream
 											<div
 												class="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300">
@@ -125,6 +126,16 @@ export function AboutUs() {
 													class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
 													<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
 												</a>
+=======
+												<div
+													class="flex items-center justify-center opacity-85 hover:opacity-100
+                                transition-opacity duration-300 bg-white rounded-full mx-12">
+													<a
+														href="#"
+														class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+														<i class="mdi mdi-github text-indigo-500 mx-auto mt-2"></i>
+													</a>
+>>>>>>> Stashed changes
 
 												<a
 													href="#"
@@ -150,15 +161,23 @@ export function AboutUs() {
 												src={avatar}></img>
 										</a>
 
+<<<<<<< Updated upstream
 										<div class="text-center mt-6">
 											<h1 class="text-gray-900 text-xl font-bold mb-4">
 												Raphael Dikstra Satya Prameswara
 											</h1>
+=======
+											<div class="text-center mt-6">
+												<h1 class="text-white text-xl font-bold mb-7">
+													Efri Ramadhan
+												</h1>
+>>>>>>> Stashed changes
 
 											<div class="text-gray-700 font-normal mb-2">
 												00000078564
 											</div>
 
+<<<<<<< Updated upstream
 											<div
 												class="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300">
@@ -167,6 +186,16 @@ export function AboutUs() {
 													class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
 													<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
 												</a>
+=======
+												<div
+													class="flex items-center justify-center opacity-85 hover:opacity-100
+                                transition-opacity duration-300 bg-white rounded-full mx-12">
+													<a
+														href="#"
+														class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+														<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
+													</a>
+>>>>>>> Stashed changes
 
 												<a
 													href="#"
@@ -192,15 +221,23 @@ export function AboutUs() {
 												src={avatar}></img>
 										</a>
 
+<<<<<<< Updated upstream
 										<div class="text-center mt-6">
 											<h1 class="text-gray-900 text-xl font-bold mb-12">
 												Dzaky Fatur Rahman
 											</h1>
+=======
+											<div class="text-center mt-6">
+												<h1 class="text-white text-xl font-bold mb-1">
+													Raphael Dikstra Satya Prameswara
+												</h1>
+>>>>>>> Stashed changes
 
 											<div class="text-gray-700 font-normal mb-2">
 												00000089614
 											</div>
 
+<<<<<<< Updated upstream
 											<div
 												class="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300">
@@ -209,6 +246,16 @@ export function AboutUs() {
 													class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
 													<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
 												</a>
+=======
+												<div
+													class="flex items-center justify-center opacity-85 hover:opacity-100
+                                transition-opacity duration-300 bg-white rounded-full mx-12">
+													<a
+														href="#"
+														class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+														<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
+													</a>
+>>>>>>> Stashed changes
 
 												<a
 													href="#"
@@ -234,6 +281,7 @@ export function AboutUs() {
 												src={avatar}></img>
 										</a>
 
+<<<<<<< Updated upstream
 										<div class="text-center mt-6">
 											<h1 class="text-gray-900 text-xl font-bold mb-1">
 												Axel Reginald Wiranto
@@ -241,8 +289,41 @@ export function AboutUs() {
 
 											<div class="text-gray-700 font-normal mb-2">
 												00000078456
+=======
+											<div class="text-center mt-6">
+												<h1 class="text-white text-xl font-bold mb-9">
+													Dzaky Fatur Rahman
+												</h1>
+
+												<div class="text-white font-normal mb-2">
+													00000089614
+												</div>
+
+												<div
+													class="flex items-center justify-center opacity-85 hover:opacity-100
+                                transition-opacity duration-300 bg-white rounded-full mx-12">
+													<a
+														href="#"
+														class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+														<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
+													</a>
+
+													<a
+														href="#"
+														class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+														<i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
+													</a>
+
+													<a
+														href="#"
+														class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+														<i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+													</a>
+												</div>
+>>>>>>> Stashed changes
 											</div>
 
+<<<<<<< Updated upstream
 											<div
 												class="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300">
@@ -251,6 +332,33 @@ export function AboutUs() {
 													class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
 													<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
 												</a>
+=======
+									<div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lgpx-4">
+										<div class="flex flex-col">
+											<a href="#" class="mx-auto">
+												<img
+													class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+													src={avatar}></img>
+											</a>
+
+											<div class="text-center mt-6">
+												<h1 class="text-white text-xl font-bold mb-1">
+													Axel Reginald Wiranto
+												</h1>
+
+												<div class="text-white font-normal mb-2">
+													00000078456
+												</div>
+
+												<div
+													class="flex items-center justify-center opacity-85 hover:opacity-100
+                                transition-opacity duration-300 bg-white rounded-full mx-12">
+													<a
+														href="#"
+														class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+														<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
+													</a>
+>>>>>>> Stashed changes
 
 												<a
 													href="#"
