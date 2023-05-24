@@ -1,10 +1,11 @@
 import { Hero } from "../component/Hero";
 import { Navbar } from "../component/Navbar";
-import { PlayModeCard } from "../component/PlayModeCard";
 import { FlexboxBox } from "../component/FlexboxBox";
 import { Footer } from "../component/Footer";
+import { SelectModeCard } from "../component/SelectModeCard";
+import { RandomTrivia } from "../component/RandomTrivia";
 import quizpng from "../assets/quiz.png";
-import color from "../color";
+import clippaper from "../assets/clippaper.png";
 
 export function Home() {
 	return (
@@ -20,8 +21,13 @@ export function Home() {
 						<FlexboxBox content={<Hero />} className="mt-[5.2rem]" />
 						{/* How To */}
 						<div className="">
-							<div className="py-20 text-center">
-								<div className="text-7xl font-bold">How To</div>
+							<div className="relative py-10 scale-90 lg:scale-100">
+								<div className="flex justify-center rotate-[4deg]">
+									<img src={clippaper} className="h-80"></img>
+								</div>
+								<h1 className="absolute text-5xl overlay-text text-black">
+									How To
+								</h1>
 							</div>
 							<div className="flex flex-col lg:flex-row gap-2">
 								<FlexboxBox
@@ -138,12 +144,11 @@ export function Home() {
 								/>
 							</div>
 						</div>
-						{/* Select Play */}
 					</div>
 				</div>
 			</div>
 			{/* Bagian 2 */}
-			<div className="flex flex-col relative bottom-[15rem] lg:bottom-[30rem] scale-100">
+			<div className="flex flex-col relative bottom-[15rem] lg:bottom-[25rem] scale-100">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 					<path
 						fill="#5E60CE"
@@ -153,72 +158,57 @@ export function Home() {
 				<div className="bg-[#5E60CE] -mt-1 pb-4">
 					<div className="container mx-auto">
 						{/* Random Trivia */}
-						<div className="pb-5 lg:pb-20 pt-12 lg:pt-20 text-center">
-							<div className="text-4xl lg:text-7xl font-bold">
-								Random Trivia
+						<div className="flex flex-col gap-5">
+							<div className="py-5 pt-7 text-center">
+								<div className="text-4xl lg:text-7xl font-bold">
+									Random Trivia
+								</div>
 							</div>
-						</div>
-						<div className="flex flex-row my-1 gap-2 flex-nowrap overflow-hidden scale-75 lg:scale-100">
-							<FlexboxBox
-								content={
-									<div className="p-7 text-center h-full">
-										<div className="flex h-1/3">
-											<img className="h-24" src={quizpng}></img>
-											<div className="text-3xl font-bold p-6">
-												Did you know?
-											</div>
-										</div>
-										<div className="h-2/3 content-center align-middle pt-10">
-											<div className="text-3xl font-bold italic">
-												Jakarta merupakan ibukota Indonesia!
-											</div>
-										</div>
-									</div>
-								}
-								className="flex-none w-full lg:w-1/3 h-96"
-							/>
-							<FlexboxBox
-								content={
-									<div className="p-7 text-center h-full">
-										<div className="flex h-1/3">
-											<img className="h-24" src={quizpng}></img>
-											<div className="text-3xl font-bold p-6">
-												Did you know?
-											</div>
-										</div>
-										<div className="h-2/3 content-center align-middle pt-10">
-											<div className="text-3xl font-bold italic">
-												Jakarta merupakan ibukota Indonesia!
-											</div>
-										</div>
-									</div>
-								}
-								className="flex-none w-full lg:w-1/3 h-96"
-							/>
-							<FlexboxBox
-								content={
-									<div className="p-7 text-center h-full">
-										<div className="flex h-1/3">
-											<img className="h-24" src={quizpng}></img>
-											<div className="text-3xl font-bold p-6">
-												Did you know?
-											</div>
-										</div>
-										<div className="h-2/3 content-center align-middle pt-10">
-											<div className="text-3xl font-bold italic">
-												Jakarta merupakan ibukota Indonesia!
-											</div>
-										</div>
-									</div>
-								}
-								className="flex-none w-full lg:w-1/3 h-96"
-							/>
+							<div className="flex flex-col lg:flex-row my-1 gap-2 flex-nowrap overflow-hidden scale-90 lg:scale-100">
+								<RandomTrivia
+									className="w-full lg:w-1/3"
+									title="Art & Science"
+									description="Viridium bukan elemen asli"
+								/>
+								<RandomTrivia
+									className="w-full lg:w-1/3"
+									title="Art & Science"
+									description="Uji kemampuanmu dalam ilmu sains!"
+								/>
+								<RandomTrivia
+									className="w-full lg:w-1/3"
+									title="Art & Science"
+									description="Uji kemampuanmu dalam ilmu sains!"
+								/>
+							</div>
+							<div className="flex justify-center">
+								<div
+									href="#"
+									class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+									REFRESH
+									<svg
+										aria-hidden="true"
+										className="ms-4 w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+										viewBox="0 0 100 101"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+											fill="currentColor"
+										/>
+										<path
+											d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+											fill="currentFill"
+										/>
+									</svg>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			{/* Bagian 3 */}
-			<div className="relative bottom-[15rem] lg:bottom-[30.5rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
+			<div className="relative bottom-[15rem] lg:bottom-[25rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
 				<div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
 				<div className="scale-100">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -229,85 +219,44 @@ export function Home() {
 					</svg>
 				</div>
 				<div className="-mt-1 scale-100">
-					<div className="container mx-auto w-2/3">
-						<div className="py-20 text-center">
-							<div className="text-7xl font-bold">Select Mode</div>
+					<div className="container mx-auto">
+						<div className="relative py-10 scale-90 lg:scale-100">
+							<div className="flex justify-center rotate-[4deg]">
+								<img src={clippaper} className="h-80"></img>
+							</div>
+							<h1 className="absolute text-5xl overlay-text text-black">
+								Select Mode
+							</h1>
 						</div>
-						<div className="flex flex-col lg:flex-row gap-2">
-							<FlexboxBox
-								content={
-									<div className="p-7 text-center h-full">
-										<div className="flex h-1/3">
-											<img className="h-24" src={quizpng}></img>
-											<div className="text-3xl font-bold p-6">
-												Did you know?
-											</div>
-										</div>
-										<div className="h-2/3 content-center align-middle pt-10">
-											<div className="text-3xl font-bold italic">
-												Jakarta merupakan ibukota Indonesia!
-											</div>
-										</div>
-									</div>
-								}
-								className="flex-none w-full lg:w-1/2 h-96"
-							/>
-							<FlexboxBox
-								content={
-									<div className="p-7 text-center h-full">
-										<div className="flex h-1/3">
-											<img className="h-24" src={quizpng}></img>
-											<div className="text-3xl font-bold p-6">
-												Did you know?
-											</div>
-										</div>
-										<div className="h-2/3 content-center align-middle pt-10">
-											<div className="text-3xl font-bold italic">
-												Jakarta merupakan ibukota Indonesia!
-											</div>
-										</div>
-									</div>
-								}
-								className="flex-none w-full lg:w-1/2 h-96"
-							/>
-						</div>
-						<div className="flex flex-col lg:flex-row gap-2 mt-2">
-							<FlexboxBox
-								content={
-									<div className="p-7 text-center h-full">
-										<div className="flex h-1/3">
-											<img className="h-24" src={quizpng}></img>
-											<div className="text-3xl font-bold p-6">
-												Did you know?
-											</div>
-										</div>
-										<div className="h-2/3 content-center align-middle pt-10">
-											<div className="text-3xl font-bold italic">
-												Jakarta merupakan ibukota Indonesia!
-											</div>
-										</div>
-									</div>
-								}
-								className="flex-none w-full lg:w-1/2 h-96"
-							/>
-							<FlexboxBox
-								content={
-									<div className="p-7 text-center h-full">
-										<div className="flex h-1/3">
-											<img className="h-24" src={quizpng}></img>
-											<div className="text-3xl font-bold p-6">
-												Did you know?
-											</div>
-										</div>
-										<div className="h-2/3 content-center align-middle pt-10">
-											<div className="text-3xl font-bold italic">
-												Jakarta merupakan ibukota Indonesia!
-											</div>
-										</div>
-									</div>
-								}
-								className="flex-none w-full lg:w-1/2 h-96"
-							/>
+						<div className="mx-4">
+							<div className="flex flex-col lg:flex-row gap-2 justify-center">
+								<SelectModeCard
+									className="hover:-translate-y-4 hover:-translate-x-5"
+									src="https://www.w3schools.com/html/pic_trulli.jpg"
+									title="Art & Science"
+									description="Uji kemampuanmu dalam ilmu sains!"
+								/>
+								<SelectModeCard
+									className="hover:-translate-y-4 hover:translate-x-5"
+									src="https://www.w3schools.com/html/pic_trulli.jpg"
+									title="Art & Science"
+									description="Uji kemampuanmu dalam ilmu sains!"
+								/>
+							</div>
+							<div className="flex flex-col lg:flex-row gap-2 mt-2 justify-center">
+								<SelectModeCard
+									className="hover:translate-y-4 hover:-translate-x-5"
+									src="https://www.w3schools.com/html/pic_trulli.jpg"
+									title="Art & Science"
+									description="Uji kemampuanmu dalam ilmu sains!"
+								/>
+								<SelectModeCard
+									className="hover:translate-y-4 hover:translate-x-5"
+									src="https://www.w3schools.com/html/pic_trulli.jpg"
+									title="Art & Science"
+									description="Uji kemampuanmu dalam ilmu sains!"
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
