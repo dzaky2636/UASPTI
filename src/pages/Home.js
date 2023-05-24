@@ -19,7 +19,7 @@ export function Home() {
             {/* How To */}
             <div className="">
               <div className="py-20 text-center">
-                <div className="text-7xl font-bold">How To</div>
+                <div className="text-7xl font-bold">How To?</div>
               </div>
               <div className="flex flex-col lg:flex-row gap-2">
                 <FlexboxBox
