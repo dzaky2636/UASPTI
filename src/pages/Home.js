@@ -8,7 +8,7 @@ import color from "../color";
 
 export function Home() {
 	return (
-		<div className="text-white">
+		<div className="text-white flex flex-col">
 			{/* Bagian 1 */}
 			<Navbar />
 			<div className="bg-gradient-to-b from-[#CAF0F8] to-[#48CAE4] pb-72">
@@ -143,7 +143,7 @@ export function Home() {
 				</div>
 			</div>
 			{/* Bagian 2 */}
-			<div className="flex flex-col relative bottom-[30rem] scale-100">
+			<div className="flex flex-col relative bottom-[15rem] lg:bottom-[30rem] scale-100">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 					<path
 						fill="#5E60CE"
@@ -153,10 +153,12 @@ export function Home() {
 				<div className="bg-[#5E60CE] -mt-1 pb-4">
 					<div className="container mx-auto">
 						{/* Random Trivia */}
-						<div className="py-20 text-center">
-							<div className="text-7xl font-bold">Random Trivia</div>
+						<div className="pb-5 lg:pb-20 pt-12 lg:pt-20 text-center">
+							<div className="text-4xl lg:text-7xl font-bold">
+								Random Trivia
+							</div>
 						</div>
-						<div className="flex flex-row my-1 gap-2 flex-nowrap overflow-hidden">
+						<div className="flex flex-row my-1 gap-2 flex-nowrap overflow-hidden scale-75 lg:scale-100">
 							<FlexboxBox
 								content={
 									<div className="p-7 text-center h-full">
@@ -216,7 +218,7 @@ export function Home() {
 				</div>
 			</div>
 			{/* Bagian 3 */}
-			<div className="relative bottom-[30.5rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
+			<div className="relative bottom-[15rem] lg:bottom-[30.5rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
 				<div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
 				<div className="scale-100">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
