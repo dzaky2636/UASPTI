@@ -1,11 +1,11 @@
-import { Navbar } from "../component/Navbar";
 import { Fragment, useState } from "react";
 import avatar from "../assets/avatar.png";
+import { Navbar } from "../component/Navbar";
 
 import {
 	Accordion,
-	AccordionHeader,
 	AccordionBody,
+	AccordionHeader,
 } from "@material-tailwind/react";
 import { Footer } from "../component/Footer";
 import { AboutUsItem } from "../component/AboutUsItem";
