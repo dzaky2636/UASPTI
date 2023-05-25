@@ -22,7 +22,7 @@ export function Navbar() {
 		<header className="fixed inset-x-0 top-0 z-50 bg-[#30a2a9]">
 			{/* Desktop */}
 			<nav
-				className="flex items-center justify-between p-6 lg:px-8"
+				className="flex items-center justify-between p-2 lg:px-8"
 				aria-label="Global">
 				{/* Logo */}
 				<div className="flex lg:flex-1">
@@ -43,10 +43,12 @@ export function Navbar() {
 						<Link
 							key={item.name}
 							to={item.to}
-							className="text-xl font-semibold leading-6 transition ease-in-out text-white hover:scale-110 hover:text-[#fedf51]">
+							className="group text-2xl font-semibold leading-6 transition ease-in-out text-white hover:scale-110 hover:text-black hover:bg-[#fedf51] p-4 rounded-lg">
 							<div className="flex flex-col gap-2">
 								<div className="flex justify-center">
-									<img src={`${item.icon}`} className="h-5 w-5 invert"></img>
+									<img
+										src={`${item.icon}`}
+										className="h-5 w-5 invert group-hover:invert-0"></img>
 								</div>
 								{item.name}
 							</div>
