@@ -3,46 +3,49 @@
 @import "tailwindcss/utilities";
 
 * {
-	scrollbar-color: #6969dd #fedf51;
-	scrollbar-width: 20px;
+  scrollbar-color: #6969dd #fedf51;
+  scrollbar-width: 20px;
 }
 
+html {
+  font-family: "Exo 2";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 1px;
+}
 body {
-	margin: 0;
-	font-family: "Comic Neue", cursive;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: #caf0f8;
+  margin: 0;
+  background-color: #caf0f8;
 }
 
 .fUnbounded {
-	font-family: "Unbounded", cursive;
+  font-family: "Unbounded";
 }
 
 .bgNavbar {
-	background-image: url("../assets/bg.jpg");
-	margin: -30px;
-	z-index: -1;
-	opacity: 30%;
-	background-repeat: repeat;
-	background-size: 300%;
-	mix-blend-mode: darken;
-	position: absolute;
+  background-image: url("../assets/bg.jpg");
+  margin: -30px;
+  z-index: -1;
+  opacity: 30%;
+  background-repeat: repeat;
+  background-size: 300%;
+  mix-blend-mode: darken;
+  position: absolute;
 }
 
 .bgPage {
-	background-image: url("../assets/bg.jpg");
-	opacity: 14%;
-	background-size: 100%;
-	mix-blend-mode: darken;
-	background-repeat: repeat;
-	position: absolute;
-	box-shadow: 0 0 30px 30px white inset;
+  background-image: url("../assets/bg.jpg");
+  opacity: 30%;
+  background-size: 100%;
+  mix-blend-mode: darken;
+  background-repeat: repeat;
+  position: absolute;
+  /* box-shadow: 0 0 30px 30px white inset; */
 }
 
 .overlay-text {
-	top: 50%;
-	right: 50%;
-	transform: translate(50%, -50%);
-	transform: rotate();
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  transform: rotate();
 }
