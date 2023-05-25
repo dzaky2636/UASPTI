@@ -5,7 +5,7 @@ export function LeaderboardItem(props) {
 				{props.no}
 			</div>
 			<img
-				src="https://www.w3schools.com/html/pic_trulli.jpg"
+				src={`${props.icon}`}
 				className="flex w-16 lg:w-20 h-16 lg:h-20 rounded-full border-4 border-white bg-slate-400"></img>
 			<div className="text-lg lg:text-xl font-bold my-auto text-white">
 				{props.nama}

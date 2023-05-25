@@ -62,7 +62,7 @@ export function AboutUs() {
 										<div class="flex flex-col">
 											<a href="#" class="mx-auto">
 												<img
-													class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+													class="rounded-2xl drop-shadow-md hover:drop-shadow-2xl transition-all duration-200 delay-100"
 													src={avatar}></img>
 											</a>
 

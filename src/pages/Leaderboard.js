@@ -1,6 +1,7 @@
 import { Navbar } from "../component/Navbar";
 import { LeaderboardItem } from "../component/LeaderboardItem";
 import { Footer } from "../component/Footer";
+import { LeaderboardItemTop } from "../component/LeaderboardItemTop";
 
 export function Leaderboard() {
 	return (
@@ -27,51 +28,61 @@ export function Leaderboard() {
 						</button>
 					</div>
 					<div className="flex gap-0 lg:gap-5 justify-center pt-10 z-10 transition ease-in-out scale-100 lg:scale-125">
-						<div className="flex flex-col justify-center order-2 scale-100">
-							<img
-								src="https://www.w3schools.com/html/pic_trulli.jpg"
-								className="flex w-32 h-32 bg-slate-100 border-4 border-yellow-400 rounded-full"></img>
-							<div className="-mt-8">
-								<div className="w-12 h-12 p-2 mx-auto bg-yellow-400 border-4 border-yellow-400 rounded-full">
-									<div className="ps-[0.5rem] text-xl font-bold text-white">
-										1
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="flex flex-col justify-center order-1 scale-75">
-							<img
-								src="https://www.w3schools.com/html/pic_trulli.jpg"
-								className="flex w-32 h-32 bg-slate-100 border-4 border-[#afafaf] rounded-full"></img>
-							<div className="-mt-8">
-								<div className="w-12 h-12 p-2 mx-auto bg-[#afafaf] border-4 border-[#afafaf]  rounded-full">
-									<div className="ps-[0.5rem] text-xl font-bold text-white">
-										2
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="flex flex-col justify-center order-3 scale-75">
-							<img
-								src="https://www.w3schools.com/html/pic_trulli.jpg"
-								className="flex w-32 h-32 bg-slate-100 border-4 border-[#aa895b] rounded-full"></img>
-							<div className="-mt-8">
-								<div className="w-12 h-12 p-2 mx-auto bg-[#aa895b] border-4 border-[#aa895b] rounded-full">
-									<div className="ps-[0.5rem] text-xl font-bold text-white">
-										3
-									</div>
-								</div>
-							</div>
-						</div>
+						<LeaderboardItemTop
+							no="1"
+							className="order-2 scale-100"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							color="bg-yellow-400 border-yellow-400"
+						/>
+						<LeaderboardItemTop
+							no="2"
+							className="order-1 scale-75"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							color="bg-[#afafaf] border-[#afafaf]"
+						/>
+						<LeaderboardItemTop
+							no="3"
+							className="order-3 scale-75"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							color="bg-[#aa895b] border-[#aa895b]"
+						/>
 					</div>
 					<div className="flex gap-4 flex-col pt-10 transition ease-in-out">
-						<LeaderboardItem no="4" icon="👎" nama="John Thor" />
-						<LeaderboardItem no="5" icon="🐗" nama="John Thor" />
-						<LeaderboardItem no="6" icon="🤦‍♂️" nama="John Thor" />
-						<LeaderboardItem no="7" icon="🗾" nama="John Thor" />
-						<LeaderboardItem no="8" icon="🎶" nama="John Thor" />
-						<LeaderboardItem no="9" icon="😜" nama="John Thor" />
-						<LeaderboardItem no="10" icon="🔥" nama="John Thor" />
+						<LeaderboardItem
+							no="4"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							nama="John Thor"
+						/>
+						<LeaderboardItem
+							no="5"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							nama="John Thor"
+						/>
+						<LeaderboardItem
+							no="6"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							nama="John Thor"
+						/>
+						<LeaderboardItem
+							no="7"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							nama="John Thor"
+						/>
+						<LeaderboardItem
+							no="8"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							nama="John Thor"
+						/>
+						<LeaderboardItem
+							no="9"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							nama="John Thor"
+						/>
+						<LeaderboardItem
+							no="10"
+							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							nama="John Thor"
+						/>
 					</div>
 				</div>
 				<Footer />
