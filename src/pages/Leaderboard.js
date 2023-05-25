@@ -7,7 +7,7 @@ export function Leaderboard() {
 	return (
 		<div>
 			<Navbar />
-			<div className="bg-gradient-to-b from-[#7ec7d0] to-blue-400 -z-50">
+			<div className="bg-gradient-to-b from-[#CAF0F8] to-[#48CAE4] -z-50">
 				<div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
 				<div className="container mx-auto z-20">
 					<h1 className="text-5xl lg:text-7xl font-bold text-center pt-28 text-white scale-100">
