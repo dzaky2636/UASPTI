@@ -36,7 +36,7 @@ export function AboutUs() {
 	return (
 		<div className="text-white">
 			<Navbar />
-			<div className="bg-gradient-to-b from-[#7ec7d0] to-blue-400">
+			<div className="bg-gradient-to-b from-[#CAF0F8] to-[#48CAE4]">
 				<div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
 				{/* Team Section */}
 				<div class="flex items-center justify-center min-h-screeny py-5">
@@ -123,7 +123,7 @@ export function AboutUs() {
 							<Fragment>
 								<Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
 									<AccordionHeader
-										className="bg-[#6930C3] border-2 border-[#7400B8] p-6 rounded-t-xl"
+										className="bg-[#6930C3] border-2 border-[#7400B8] p-6 rounded-t-xl text-white"
 										onClick={() => handleOpen(1)}>
 										What is Material Tailwind?
 									</AccordionHeader>
@@ -136,7 +136,7 @@ export function AboutUs() {
 								</Accordion>
 								<Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
 									<AccordionHeader
-										className="bg-[#6930C3] border-2 border-[#7400B8] p-6"
+										className="bg-[#6930C3] border-2 border-[#7400B8] p-6 text-white"
 										onClick={() => handleOpen(2)}>
 										What is Material Tailwind?
 									</AccordionHeader>
@@ -149,7 +149,7 @@ export function AboutUs() {
 								</Accordion>
 								<Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
 									<AccordionHeader
-										className="bg-[#6930C3] border-2 border-[#7400B8] p-6"
+										className="bg-[#6930C3] border-2 border-[#7400B8] p-6 text-white"
 										onClick={() => handleOpen(3)}>
 										What is Material Tailwind?
 									</AccordionHeader>
