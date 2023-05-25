@@ -1,4 +1,4 @@
-import icon from "../assets/icon/apple-touch-icon.png";
+import icon from "../assets/icon/android-chrome-512x512.png";
 
 export function Footer() {
   return (
