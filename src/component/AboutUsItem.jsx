@@ -15,20 +15,26 @@ export function AboutUsItem(props) {
 					<div class="text-white font-normal mb-2 text-xl lg:text-md">
 						({props.nim})
 					</div>
-					<div
-						class="flex items-center justify-center opacity-85 hover:opacity-100
-                                transition-opacity duration-300 bg-white rounded-full mx-12">
-						<a href="#" class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-							<i class="mdi mdi-github text-indigo-500 mx-auto mt-2"></i>
-						</a>
+					<div className="flex justify-center">
+						<div
+							class="flex items-center justify-center opacity-85 hover:opacity-100
+                                transition-opacity duration-300 bg-white rounded-full w-[60%]">
+							<a
+								href="#"
+								class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+								<i class="mdi mdi-github text-indigo-500 mx-auto mt-2"></i>
+							</a>
 
-						<a href="#" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
-							<i class="mdi mdi-discord text-blue-300 mx-auto mt-2"></i>
-						</a>
+							<a href="#" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+								<i class="mdi mdi-discord text-blue-300 mx-auto mt-2"></i>
+							</a>
 
-						<a href="#" class="flex rounded-full hover:bg-orange-50 h-10 w-10">
-							<i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
-						</a>
+							<a
+								href="#"
+								class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+								<i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -100,7 +100,9 @@ export function AboutUs() {
 					<div className="container mx-auto relative bottom-20">
 						{/* Accordion */}
 						<div className="py-20 text-center">
-							<div className="text-6xl lg:text-7xl font-bold">FAQ</div>
+							<div className="pt-20 lg:pt-0 text-6xl lg:text-7xl font-bold">
+								FAQ
+							</div>
 						</div>
 						<div className="mx-4 lg:mx-32 text-white">
 							<Fragment>
