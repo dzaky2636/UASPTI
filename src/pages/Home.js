@@ -175,7 +175,7 @@ export function Home() {
 									description="Uji kemampuanmu dalam ilmu sains!"
 								/>
 							</div>
-							<div className="flex justify-center">
+							<div className="flex justify-center transition ease-in-out hover:scale-105 hover:translate-y-2">
 								<div
 									href="#"
 									class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-[#53cde5] rounded-lg hover:bg-[#429eb1] focus:ring-4 focus:outline-none focus:ring-blue-300 scale-100 hover:scale-110">
@@ -202,7 +202,7 @@ export function Home() {
 				</div>
 			</div>
 			{/* Bagian 3 */}
-			<div className="relative bottom-[15rem] lg:bottom-[25rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
+			<div className="relative bottom-[15rem] lg:bottom-[25.5rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
 				<div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
 				<div className="scale-100">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
