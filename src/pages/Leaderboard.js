@@ -1,7 +1,7 @@
 import { Footer } from "../component/Footer";
 import { LeaderboardItem } from "../component/LeaderboardItem";
-import { Footer } from "../component/Footer";
 import { LeaderboardItemTop } from "../component/LeaderboardItemTop";
+import { Navbar } from "../component/Navbar";
 
 export function Leaderboard() {
 	return (
