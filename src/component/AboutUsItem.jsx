@@ -9,10 +9,12 @@ export function AboutUsItem(props) {
 				</a>
 
 				<div class="text-center mt-6">
-					<h1 class="text-white text-xl font-bold mb-1 min-h-[60px]">
+					<h1 class="text-white text-3xl lg:text-xl font-bold mb-1 min-h-[60px]">
 						{props.nama}
 					</h1>
-					<div class="text-white font-normal mb-2">{props.nim}</div>
+					<div class="text-white font-normal mb-2 text-xl lg:text-md">
+						({props.nim})
+					</div>
 					<div
 						class="flex items-center justify-center opacity-85 hover:opacity-100
                                 transition-opacity duration-300 bg-white rounded-full mx-12">

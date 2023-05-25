@@ -50,15 +50,14 @@ export function AboutUs() {
 						</span>
 
 						<div class="flex flex-col mt-8">
-							<div class="container max-w-7xl px-4">
-								<div class="flex flex-wrap justify-center text-center mb-12 scale-100">
+							<div class="container max-w-7xl">
+								<div class="flex justify-center text-center lg:mb-12 scale-100">
 									<div class="w-full lg:w-6/12 px-4">
 										<h1 class="text-white text-7xl font-bold mb-8">Our Team</h1>
 										<p class="text-white text-lg font-normal">Group 2</p>
 									</div>
 								</div>
-
-								<div class="flex flex-wrap items-center scale-75 lg:scale-100">
+								<div class="flex flex-wrap items-center scale-75 lg:scale-100 gap-3 lg:gap-0">
 									<AboutUsItem
 										foto="https://www.w3schools.com/html/pic_trulli.jpg"
 										nama="Batara Hotdo Horas Simbolon"

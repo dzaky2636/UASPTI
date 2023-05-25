@@ -3,8 +3,8 @@
 @import "tailwindcss/utilities";
 
 * {
-	scrollbar-width: thin;
-	scrollbar-color: var(--secondary) var(--primary);
+	scrollbar-color: #6969dd #fedf51;
+	scrollbar-width: 20px;
 }
 
 body {

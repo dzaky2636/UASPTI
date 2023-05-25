@@ -3,11 +3,14 @@ import "../style/index.css";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import homepageicon from "../assets/homepage.png";
+import leaderboardicon from "../assets/leaderboard.png";
+import groupicon from "../assets/group.png";
 
 const navigation = [
-	{ name: "Home", to: "/" },
-	{ name: "Leaderboard", to: "/leaderboard" },
-	{ name: "About Us", to: "/aboutus" },
+	{ name: "Home", to: "/", icon: homepageicon },
+	{ name: "Leaderboard", to: "/leaderboard", icon: leaderboardicon },
+	{ name: "About Us", to: "/aboutus", icon: groupicon },
 ];
 
 export function Navbar() {
@@ -44,8 +47,13 @@ export function Navbar() {
 						<Link
 							key={item.name}
 							to={item.to}
-							className="text-xl font-semibold leading-6 text-white">
-							{item.name}
+							className="text-xl font-semibold leading-6 transition ease-in-out text-white hover:scale-110 hover:text-[#fedf51]">
+							<div className="flex flex-col gap-2">
+								<div className="flex justify-center">
+									<img src={`${item.icon}`} className="h-5 w-5 invert"></img>
+								</div>
+								{item.name}
+							</div>
 						</Link>
 					))}
 				</div>
@@ -81,8 +89,13 @@ export function Navbar() {
 									<Link
 										key={item.name}
 										to={item.to}
-										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-black hover:bg-[#fedf51]">
-										{item.name}
+										className="group -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-black hover:bg-[#fedf51]">
+										<div className="flex gap-2">
+											<img
+												src={`${item.icon}`}
+												className="h-5 w-5 invert group-hover:invert-0"></img>
+											{item.name}
+										</div>
 									</Link>
 								))}
 							</div>

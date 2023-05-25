@@ -6,6 +6,7 @@ import { SelectModeCard } from "../component/SelectModeCard";
 import { RandomTrivia } from "../component/RandomTrivia";
 import quizpng from "../assets/quiz.png";
 import clippaper from "../assets/clippaper.png";
+import { ClipPaperTitle } from "../component/ClipPaperTitle";
 
 export function Home() {
 	return (
@@ -21,14 +22,7 @@ export function Home() {
 						<FlexboxBox content={<Hero />} className="mt-[5.2rem]" />
 						{/* How To */}
 						<div className="">
-							<div className="relative py-10 scale-90 lg:scale-100">
-								<div className="flex justify-center rotate-[4deg]">
-									<img src={clippaper} className="h-80"></img>
-								</div>
-								<h1 className="absolute text-5xl overlay-text text-black">
-									How To
-								</h1>
-							</div>
+							<ClipPaperTitle title="How To" />
 							<div className="flex flex-col lg:flex-row gap-2">
 								<FlexboxBox
 									content={
@@ -184,7 +178,7 @@ export function Home() {
 							<div className="flex justify-center">
 								<div
 									href="#"
-									class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+									class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-[#53cde5] rounded-lg hover:bg-[#429eb1] focus:ring-4 focus:outline-none focus:ring-blue-300 scale-100 hover:scale-110">
 									REFRESH
 									<svg
 										aria-hidden="true"
@@ -220,24 +214,17 @@ export function Home() {
 				</div>
 				<div className="-mt-1 scale-100">
 					<div className="container mx-auto">
-						<div className="relative py-10 scale-90 lg:scale-100">
-							<div className="flex justify-center rotate-[4deg]">
-								<img src={clippaper} className="h-80"></img>
-							</div>
-							<h1 className="absolute text-5xl overlay-text text-black">
-								Select Mode
-							</h1>
-						</div>
+						<ClipPaperTitle title="Select Mode" />
 						<div className="mx-4">
 							<div className="flex flex-col lg:flex-row gap-2 justify-center">
 								<SelectModeCard
-									className="hover:-translate-y-4 hover:-translate-x-5"
+									className="lg:hover:-translate-y-4 lg:hover:-translate-x-5"
 									src="https://www.w3schools.com/html/pic_trulli.jpg"
 									title="Art & Science"
 									description="Uji kemampuanmu dalam ilmu sains!"
 								/>
 								<SelectModeCard
-									className="hover:-translate-y-4 hover:translate-x-5"
+									className="lg:hover:-translate-y-4 lg:hover:translate-x-5"
 									src="https://www.w3schools.com/html/pic_trulli.jpg"
 									title="Art & Science"
 									description="Uji kemampuanmu dalam ilmu sains!"
@@ -245,13 +232,13 @@ export function Home() {
 							</div>
 							<div className="flex flex-col lg:flex-row gap-2 mt-2 justify-center">
 								<SelectModeCard
-									className="hover:translate-y-4 hover:-translate-x-5"
+									className="lg:hover:translate-y-4 lg:hover:-translate-x-5"
 									src="https://www.w3schools.com/html/pic_trulli.jpg"
 									title="Art & Science"
 									description="Uji kemampuanmu dalam ilmu sains!"
 								/>
 								<SelectModeCard
-									className="hover:translate-y-4 hover:translate-x-5"
+									className="lg:hover:translate-y-4 lg:hover:translate-x-5"
 									src="https://www.w3schools.com/html/pic_trulli.jpg"
 									title="Art & Science"
 									description="Uji kemampuanmu dalam ilmu sains!"
