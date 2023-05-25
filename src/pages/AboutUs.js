@@ -8,6 +8,7 @@ import {
 	AccordionBody,
 } from "@material-tailwind/react";
 import { Footer } from "../component/Footer";
+import { AboutUsItem } from "../component/AboutUsItem";
 
 function Icon({ id, open }) {
 	return (
@@ -58,225 +59,31 @@ export function AboutUs() {
 								</div>
 
 								<div class="flex flex-wrap items-center scale-75 lg:scale-100">
-									<div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-										<div class="flex flex-col">
-											<a href="#" class="mx-auto">
-												<img
-													class="rounded-2xl drop-shadow-md hover:drop-shadow-2xl transition-all duration-200 delay-100"
-													src={avatar}></img>
-											</a>
-
-											<div class="text-center mt-6">
-												<h1 class="text-white text-xl font-bold mb-1">
-													Batara Hotdo Horas Simbolon
-												</h1>
-
-												<div class="text-white font-normal mb-2">
-													00000078626
-												</div>
-
-												<div
-													class="flex items-center justify-center opacity-50 hover:opacity-100
-                                transition-opacity duration-300">
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-														<i class="mdi mdi-github text-indigo-500 mx-auto mt-2"></i>
-													</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-blue-50 h-10 w-10">
-														<i class="mdi mdi-discord text-blue-300 mx-auto mt-2"></i>
-													</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-orange-50 h-10 w-10">
-														<i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-										<div class="flex flex-col">
-											<a href="#" class="mx-auto">
-												<img
-													class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-													src={avatar}></img>
-											</a>
-
-											<div class="text-center mt-6">
-												<h1 class="text-white text-xl font-bold mb-10">
-													Efri Ramadhan
-												</h1>
-
-												<div class="text-white font-normal mb-2">
-													00000078662
-												</div>
-
-											<div
-												class="flex items-center justify-center opacity-50 hover:opacity-100
-                                transition-opacity duration-300">
-												<a
-													href="#"
-													class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-													<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
-												</a>
-
-												<div
-													class="flex items-center justify-center opacity-85 hover:opacity-100
-                                transition-opacity duration-300 bg-white rounded-full mx-12">
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-														<i class="mdi mdi-github text-indigo-500 mx-auto mt-2"></i>
-													</a>
-
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-blue-50 h-10 w-10">
-														<i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
-													</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-orange-50 h-10 w-10">
-														<i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-										<div class="flex flex-col">
-											<a href="#" class="mx-auto">
-												<img
-													class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-													src={avatar}></img>
-											</a>
-
-										<div class="text-center mt-6">
-											<h1 class="text-gray-900 text-xl font-bold mb-4">
-												Raphael Dikstra Satya Prameswara
-											</h1>
-
-												<div class="text-white font-normal mb-2">
-													00000078564
-												</div>
-
-											<div
-												class="flex items-center justify-center opacity-50 hover:opacity-100
-                                transition-opacity duration-300">
-												<a
-													href="#"
-													class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-													<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
-												</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-blue-50 h-10 w-10">
-														<i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
-													</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-orange-50 h-10 w-10">
-														<i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-										<div class="flex flex-col">
-											<a href="#" class="mx-auto">
-												<img
-													class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-													src={avatar}></img>
-											</a>
-
-										<div class="text-center mt-6">
-											<h1 class="text-gray-900 text-xl font-bold mb-12">
-												Dzaky Fatur Rahman
-											</h1>
-
-												<div class="text-white font-normal mb-2">
-													00000089614
-												</div>
-
-											<div
-												class="flex items-center justify-center opacity-50 hover:opacity-100
-                                transition-opacity duration-300">
-												<a
-													href="#"
-													class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-													<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
-												</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-blue-50 h-10 w-10">
-														<i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
-													</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-orange-50 h-10 w-10">
-														<i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lgpx-4">
-										<div class="flex flex-col">
-											<a href="#" class="mx-auto">
-												<img
-													class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-													src={avatar}></img>
-											</a>
-
-										<div class="text-center mt-6">
-											<h1 class="text-gray-900 text-xl font-bold mb-1">
-												Axel Reginald Wiranto
-											</h1>
-
-											<div class="text-gray-700 font-normal mb-2">
-												00000078456
-											</div>
-
-											<div
-												class="flex items-center justify-center opacity-50 hover:opacity-100
-                                transition-opacity duration-300">
-												<a
-													href="#"
-													class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-													<i class="mdi mdi-github text-indigo-700 mx-auto mt-2"></i>
-												</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-blue-50 h-10 w-10">
-														<i class="mdi mdi-discord text-blue-400 mx-auto mt-2"></i>
-													</a>
-
-													<a
-														href="#"
-														class="flex rounded-full hover:bg-orange-50 h-10 w-10">
-														<i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Batara Hotdo Horas Simbolon"
+										nim="00000078626"
+									/>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Efri Ramadhan"
+										nim="00000078662"
+									/>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Raphael Dikstra Satya Prameswara"
+										nim="00000078564"
+									/>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Dzaky Fatur Rahman"
+										nim="00000089614"
+									/>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Axel Reginald Wiranto"
+										nim="00000078456"
+									/>
 								</div>
 							</div>
 						</div>
