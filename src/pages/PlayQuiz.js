@@ -1,5 +1,7 @@
+import { render } from "@testing-library/react";
 import { NavbarPlay } from "../component/NavbarPlay";
 import { QuizAnswerButton } from "../component/QuizAnswerButton";
+import axios from "axios";
 
 export function PlayQuiz() {
 	return (

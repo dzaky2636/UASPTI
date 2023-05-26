@@ -32,12 +32,14 @@ export function Leaderboard() {
 							no="1"
 							className="order-2 scale-100"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
+							score="100"
 							color="bg-yellow-400 border-yellow-400"
 							gradient="border-2 border-[#f4c437] bg-gradient-to-br from-[#ffef95] to-[#f4c437]"
 						/>
 						<LeaderboardItemTop
 							no="2"
 							className="order-1 scale-75"
+							score="100"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							color="bg-[#afafaf] border-[#afafaf]"
 							gradient="border-2 border-[#b0b0b0] bg-gradient-to-br from-[#cfcfcf] to-[#b0b0b0]"
@@ -45,6 +47,7 @@ export function Leaderboard() {
 						<LeaderboardItemTop
 							no="3"
 							className="order-3 scale-75"
+							score="100"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							color="bg-[#aa895b] border-[#aa895b]"
 							gradient="border-2 border-[#af8f5a] bg-gradient-to-br from-[#d3bda0] to-[#af8f5a]"
@@ -55,36 +58,43 @@ export function Leaderboard() {
 							no="4"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							nama="John Thor"
+							score="100"
 						/>
 						<LeaderboardItem
 							no="5"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							nama="John Thor"
+							score="100"
 						/>
 						<LeaderboardItem
 							no="6"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							nama="John Thor"
+							score="100"
 						/>
 						<LeaderboardItem
 							no="7"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							nama="John Thor"
+							score="100"
 						/>
 						<LeaderboardItem
 							no="8"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							nama="John Thor"
+							score="100"
 						/>
 						<LeaderboardItem
 							no="9"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							nama="John Thor"
+							score="100"
 						/>
 						<LeaderboardItem
 							no="10"
 							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							nama="John Thor"
+							score="100"
 						/>
 					</div>
 				</div>
