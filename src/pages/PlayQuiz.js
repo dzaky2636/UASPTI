@@ -8,18 +8,11 @@ import axios from "axios";
 const TriviaAPIurl = "https://opentdb.com/api.php?amount=10&type=multiple";
 
 export function PlayQuiz() {
-	let choices = Array.from(document.getElementsByClassName("choice-text"));
-
-	let currentQuestion = {};
-	let acceptingAnswers = true;
-	let score = 0;
-	let questionCounter = 0;
-	let availableQuestions = [];
+	const [questionIndex, setQuestionIndex] = useState(0);
+	const [questions, getQuiz] = useState([]);
 
 	const CORRECT_BONUS = 10;
 	const WRONG_PENALTY = 5;
-
-	const [questions, getQuiz] = useState([]);
 
 	useEffect(() => {
 		getAllQuiz();
@@ -37,6 +30,28 @@ export function PlayQuiz() {
 
 	if (questions == "") {
 		return <LoadingScreen />;
+	}
+
+	let choices = questions[questionIndex].incorrect_answers.concat(
+		questions[questionIndex].correct_answer
+	);
+
+	for (var i = choices.length - 1; i > 0; i--) {
+		var j = Math.floor(Math.random() * (i + 1));
+		var temp = choices[i];
+		choices[i] = choices[j];
+		choices[j] = temp;
+	}
+
+	var correctAnswer = questions[questionIndex].correct_answer;
+	console.log(correctAnswer);
+	function checkAnswer(choiceIndex) {
+		setQuestionIndex(questionIndex + 1);
+		if (choices[choiceIndex] == correctAnswer) {
+			console.log("correct");
+		} else {
+			console.log("false");
+		}
 	}
 
 	return (
@@ -66,13 +81,18 @@ export function PlayQuiz() {
 							</div>
 						</div>
 						<h1
-							dangerouslySetInnerHTML={{ __html: currentQuestion.question }}
+							dangerouslySetInnerHTML={{
+								__html: questions[questionIndex].question,
+							}}
 							className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mx-10"></h1>
 						<div className="flex flex-wrap gap-4 justify-center mx-10 scale-90 lg:scale-100">
-							<QuizAnswerButton answer="George Orwell" datanumber="1" />
-							<QuizAnswerButton answer="George Orwell" datanumber="2" />
-							<QuizAnswerButton answer="George Orwell" datanumber="3" />
-							<QuizAnswerButton answer="George Orwell" datanumber="4" />
+							{choices.map((choice, index) => (
+								<QuizAnswerButton
+									onClick={() => checkAnswer(index)}
+									answer={choice}
+									datanumber={index}
+								/>
+							))}
 						</div>
 					</div>
 				</div>
