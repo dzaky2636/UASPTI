@@ -1,13 +1,40 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { ClipPaperTitle } from "../component/ClipPaperTitle";
 import { FlexboxBox } from "../component/FlexboxBox";
 import { Footer } from "../component/Footer";
 import { Hero } from "../component/Hero";
 import { HowTo } from "../component/HowTo";
-import { Navbar } from "../component/Navbar";
-import { RandomTrivia } from "../component/RandomTrivia";
-import { SelectModeCard } from "../component/SelectModeCard";
+import { LoadingScreen } from "../component/LoadingScreen";
+
+const TriviaAPIurl = "https://opentdb.com/api.php?amount=3&type=multiple";
 
 export function Home() {
+  const [buttonClick, setButtonClick] = useState(false);
+  const [questions, getQuiz] = useState([]);
+
+  useEffect(() => {
+    getAllQuiz();
+  }, [buttonClick]);
+
+  const getAllQuiz = () => {
+    axios
+      .get(TriviaAPIurl)
+      .then((response) => {
+        const questions = response.data.results;
+        getQuiz(questions);
+      })
+      .catch((error) => console.error(`Error ${error}`));
+  };
+
+  const handleClick = () => {
+    setButtonClick(!buttonClick);
+  };
+
+  if (questions == "") {
+    return <LoadingScreen />;
+  }
+
   return (
     <div className="text-white flex flex-col">
       {/* Bagian 1 */}
@@ -41,32 +68,25 @@ export function Home() {
         <div className="bg-[#5E60CE] -mt-1 pb-4">
           <div className="container mx-auto">
             {/* Random Trivia */}
-            <div className="flex flex-col gap-5">
+            <div id="RandomTrivia" className="flex flex-col gap-5">
               <div className="py-5 pt-7 text-center">
                 <div className="text-4xl lg:text-7xl font-bold">
                   Random Trivia
                 </div>
               </div>
               <div className="flex flex-col lg:flex-row my-1 gap-2 flex-nowrap overflow-hidden scale-90 lg:scale-100">
-                <RandomTrivia
-                  className="w-full lg:w-1/3"
-                  title="Art & Science"
-                  description="Viridium bukan elemen asli"
-                />
-                <RandomTrivia
-                  className="w-full lg:w-1/3"
-                  title="Art & Science"
-                  description="Uji kemampuanmu dalam ilmu sains!"
-                />
-                <RandomTrivia
-                  className="w-full lg:w-1/3"
-                  title="Art & Science"
-                  description="Uji kemampuanmu dalam ilmu sains!"
-                />
+                {questions.map((question, index) => (
+                  <RandomTrivia
+                    className="w-full lg:w-1/3"
+                    category={question.category}
+                    question={question.question}
+                    answer={question.correct_answer}
+                  />
+                ))}
               </div>
               <div className="flex justify-center transition ease-in-out hover:scale-105 hover:translate-y-2">
-                <div
-                  href="#"
+                <a
+                  onClick={handleClick}
                   class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-[#ce5a83] rounded-lg hover:bg-[#fedf52] hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 scale-100 hover:scale-110"
                 >
                   REFRESH
@@ -86,7 +106,7 @@ export function Home() {
                       fill="currentFill"
                     />
                   </svg>
-                </div>
+                </a>
               </div>
             </div>
           </div>
