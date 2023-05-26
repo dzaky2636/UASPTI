@@ -67,7 +67,7 @@ export function Home() {
               <div className="flex justify-center transition ease-in-out hover:scale-105 hover:translate-y-2">
                 <div
                   href="#"
-                  class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-[#53cde5] rounded-lg hover:bg-[#429eb1] focus:ring-4 focus:outline-none focus:ring-blue-300 scale-100 hover:scale-110"
+                  class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-[#ce5a83] rounded-lg hover:bg-[#fedf52] hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 scale-100 hover:scale-110"
                 >
                   REFRESH
                   <svg

@@ -27,7 +27,7 @@ export function Navbar() {
       >
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <img className="h-8 w-auto" src={logo} alt="UQuizz Logo" />
+          <img className="h-[5vh] w-auto" src={logo} alt="UQuizz Logo" />
         </div>
         {/* Button hamburger */}
         <div className="flex lg:hidden">
@@ -51,7 +51,7 @@ export function Navbar() {
                 <div className="flex justify-center">
                   <img
                     src={`${item.icon}`}
-                    className="h-5 w-5 invert group-hover:invert-0"
+                    className="h-7 w-7 invert group-hover:invert-0"
                   ></img>
                 </div>
                 {item.name}
@@ -61,9 +61,13 @@ export function Navbar() {
         </div>
         {/* Kanan */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button className="font-semibold text-base text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
+          <Button className="font font-semibold text-xl text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
             Play
-            <img src={playButton} alt="Play Button" className="h-4 w-4 mb-0" />
+            <img
+              src={playButton}
+              alt="Play Button"
+              className="h-8 w-auto mb-0"
+            />
           </Button>
         </div>
       </nav>
@@ -99,7 +103,7 @@ export function Navbar() {
                     <div className="flex gap-2">
                       <img
                         src={`${item.icon}`}
-                        className="h-5 w-5 invert group-hover:invert-0"
+                        className="h-6 w-6 invert group-hover:invert-0"
                       ></img>
                       {item.name}
                     </div>

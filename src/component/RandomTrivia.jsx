@@ -3,7 +3,7 @@ import quizpng from "../assets/quiz.png";
 export function RandomTrivia(props) {
   return (
     <div
-      className={`bg-gradient-to-br from-[#4EA8DE] to-[#5E60CE] rounded-2xl border-2 border-white shadow p-6 transition ease-in-out ${props.className}`}
+      className={`bg-gradient-to-br from-[#30a2a9] to-[#5E60CE] rounded-2xl border-4 border-white shadow p-6 transition ease-in-out ${props.className} hover:border-[#fedf52]`}
     >
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 -me-40">

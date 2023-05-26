@@ -14,13 +14,13 @@ export function Hero() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="#"
-              className="rounded-md bg-[#00787e] px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:text-black hover:bg-[#fedf52]"
+              className="rounded-md bg-[#ce5a83] px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:text-black hover:bg-[#fedf52]"
             >
               Play the Game
             </a>
             <a
               href="#"
-              className="rounded-md bg-[#00787e] px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:text-black hover:bg-[#fedf51]"
+              className="rounded-md bg-[#ce5a83] px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:text-black hover:bg-[#fedf51]"
             >
               How to Play
             </a>
