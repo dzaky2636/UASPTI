@@ -36,7 +36,7 @@ export function Navbar() {
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             onClick={() => setMobileMenuOpen(true)}
           >
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-8 w-8" aria-hidden="true" />
           </button>
         </div>
         {/* Link */}
@@ -63,11 +63,7 @@ export function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button className="font font-semibold text-xl text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
             Play
-            <img
-              src={playButton}
-              alt="Play Button"
-              className="h-8 w-auto mb-0"
-            />
+            <img src={playButton} alt="Play Button" className="h-8 w-8 mb-1" />
           </Button>
         </div>
       </nav>

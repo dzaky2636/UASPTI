@@ -7,11 +7,11 @@
   scrollbar-width: 20px;
 }
 
-html {
-  font-family: "Roboto Slab";
+body {
+  font-family: "Unbounded";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 body {
   margin: 0;
