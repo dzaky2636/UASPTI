@@ -43,7 +43,7 @@ export function Navbar() {
 						<Link
 							key={item.name}
 							to={item.to}
-							className="group text-2xl font-semibold leading-6 transition ease-in-out text-white hover:scale-110 hover:text-black hover:bg-[#fedf51] p-4 rounded-lg">
+							className="group text-lg font-semibold leading-6 transition ease-in-out text-white hover:scale-110 hover:text-black hover:bg-[#fedf51] p-4 rounded-lg">
 							<div className="flex flex-col gap-2">
 								<div className="flex justify-center">
 									<img
