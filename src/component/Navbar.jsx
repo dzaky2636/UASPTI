@@ -27,13 +27,13 @@ export function Navbar() {
       >
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <img className="h-[5vh] w-auto" src={logo} alt="UQuizz Logo" />
+          <img className="h-[7vh] w-auto p-1" src={logo} alt="UQuizz Logo" />
         </div>
         {/* Button hamburger */}
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-5 text-white"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon className="h-8 w-8" aria-hidden="true" />
@@ -45,13 +45,13 @@ export function Navbar() {
             <Link
               key={item.name}
               to={item.to}
-              className="group text-2xl font-semibold leading-6 transition ease-in-out text-white hover:scale-110 hover:text-black hover:bg-[#fedf51] p-4 rounded-lg"
+              className="group text-sm font-semibold leading-5 transition ease-in-out text-white hover:scale-110 hover:text-black hover:bg-[#fedf51] p-2 rounded-lg"
             >
               <div className="flex flex-col gap-2">
                 <div className="flex justify-center">
                   <img
                     src={`${item.icon}`}
-                    className="h-7 w-7 invert group-hover:invert-0"
+                    className="h-6 w-auto invert group-hover:invert-0"
                   ></img>
                 </div>
                 {item.name}
@@ -61,9 +61,13 @@ export function Navbar() {
         </div>
         {/* Kanan */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button className="font font-semibold text-xl text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
+          <Button className="font font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
             Play
-            <img src={playButton} alt="Play Button" className="h-8 w-8 mb-1" />
+            <img
+              src={playButton}
+              alt="Play Button"
+              className="h-5 w-auto mb-1"
+            />
           </Button>
         </div>
       </nav>

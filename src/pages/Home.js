@@ -6,6 +6,9 @@ import { Footer } from "../component/Footer";
 import { Hero } from "../component/Hero";
 import { HowTo } from "../component/HowTo";
 import { LoadingScreen } from "../component/LoadingScreen";
+import { Navbar } from "../component/Navbar";
+import { RandomTrivia } from "../component/RandomTrivia";
+import { SelectModeCard } from "../component/SelectModeCard";
 
 const TriviaAPIurl = "https://opentdb.com/api.php?amount=3&type=multiple";
 
@@ -39,7 +42,7 @@ export function Home() {
     <div className="text-white flex flex-col">
       {/* Bagian 1 */}
       <Navbar />
-      <div className="bg-gradient-to-b from-[#CAF0F8] to-[#48CAE4] h-[88rem] lg:h-[140rem]  mt-10">
+      <div className="bg-gradient-to-b from-[#48CAE4] to-[#CAF0F8] h-[88rem] lg:h-[140rem]  mt-10">
         <div className="bgPage w-full h-[88rem] lg:h-[140rem] z-0"></div>
         {/* Flexbox grid */}
         <div className="container mx-auto scale-100">

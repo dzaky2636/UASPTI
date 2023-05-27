@@ -36,7 +36,7 @@ export function AboutUs() {
   return (
     <div className="text-white">
       <Navbar />
-      <div className="bg-gradient-to-b from-[#CAF0F8] to-[#48CAE4]">
+      <div className="bg-gradient-to-b from-[#48CAE4] to-[#CAF0F8]">
         <div className="bgPage w-full h-[88rem] lg:h-[106rem] z-0"></div>
         {/* Team Section */}
         <div class="flex items-center justify-center min-h-screeny py-5">
@@ -54,11 +54,11 @@ export function AboutUs() {
               <div class="container max-w-7xl">
                 <div class="flex justify-center text-center lg:mb-12 scale-100">
                   <div class="w-full lg:w-6/12 px-4">
-                    <h1 class="text-white text-7xl font-bold mb-8">Our Team</h1>
-                    <p class="text-white text-lg font-normal">Group 2</p>
+                    <h1 class="text-white text-5xl font-bold mb-2">Our Team</h1>
+                    <p class="text-white text-lg font-normal mb-6">Group 2</p>
                   </div>
                 </div>
-                <div class="flex flex-wrap items-center scale-75 lg:scale-100 gap-3 lg:gap-0">
+                <div class="flex flex-wrap scale-100">
                   <AboutUsItem
                     foto="https://www.w3schools.com/html/pic_trulli.jpg"
                     nama="Batara Hotdo Horas Simbolon"
@@ -186,7 +186,7 @@ export function AboutUs() {
                 <span class="hidden lg:inline text-md lg:text-2xl font-semibold ">
                   © 2023 Kelompok 2™. All Rights Reserved.
                 </span>
-                <span class="inline lg:hidden text-md lg:text-2xl font-semibold ">
+                <span class="inline lg:hidden text-sm lg:text-2xl font-semibold ">
                   © 2023 Kelompok 2™
                 </span>
               </div>

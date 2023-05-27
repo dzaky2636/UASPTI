@@ -10,36 +10,33 @@ export function AboutUsItem(props) {
         </a>
 
         <div class="text-center mt-6">
-          <h1 class="text-white text-3xl lg:text-xl font-bold mb-1 min-h-[60px]">
+          <h1 class="text-white text-2xl lg:text-xl font-bold mb-1">
             {props.nama}
           </h1>
           <div class="text-white font-normal mb-2 text-xl lg:text-md">
             ({props.nim})
           </div>
           <div className="flex justify-center">
-            <div
-              class="flex items-center justify-center opacity-85 hover:opacity-100
-                                transition-opacity duration-300 bg-white rounded-full w-[60%]"
-            >
+            <div class="flex items-center justify-center opacity-85 hover:opacity-100 transition-opacity duration-300 rounded-full w-[60%] mb-5 gap-2">
               <a
                 href={`${props.github}`}
-                class="flex rounded-full hover:bg-indigo-50 h-10 w-10"
+                class="flex rounded-full bg-white h-10 w-10"
               >
-                <i class="mdi mdi-github text-indigo-500 mx-auto mt-2"></i>
+                <i class="mdi mdi-github text-black m-auto pl-[1px]"></i>
               </a>
 
               <a
                 href={`${props.discord}`}
-                class="flex rounded-full hover:bg-blue-50 h-10 w-10"
+                class="flex rounded-full bg-white h-10 w-10"
               >
-                <i class="mdi mdi-discord text-blue-300 mx-auto mt-2"></i>
+                <i class="mdi mdi-discord text-[#0f1ba1] m-auto pl-[1px]"></i>
               </a>
 
               <a
                 href={`${props.instagram}`}
-                class="flex rounded-full hover:bg-orange-50 h-10 w-10"
+                class="flex rounded-full bg-white h-10 w-10"
               >
-                <i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+                <i class="mdi mdi-instagram text-[#fd6caa] m-auto pl-[1px]"></i>
               </a>
             </div>
           </div>
