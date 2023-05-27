@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { NavbarPlay } from "../component/NavbarPlay";
 import { QuizAnswerButton } from "../component/QuizAnswerButton";
 import { useState, useEffect } from "react";
@@ -9,10 +10,8 @@ import { Button } from "@material-tailwind/react";
 import playButton from "../assets/play-button.png";
 
 import leaderboardData from "./leaderboard.json";
+import { callExpression } from "@babel/types";
 
-const TriviaAPIurl = "https://opentdb.com/api.php?amount=21&type=multiple";
-const GIFAPIurl =
-	"https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=art";
 const HelloGIFAPIurl =
 	"https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=hello";
 const UserAvatarGIFAPIurl =
@@ -29,6 +28,36 @@ const shuffleArray = (array) => {
 };
 
 export function PlayQuiz() {
+	var TriviaAPIurl = "";
+	var GIFAPIurl = "";
+	var category = useParams();
+	if (category.type == "videogame") {
+		TriviaAPIurl =
+			"https://opentdb.com/api.php?amount=25&category=15&difficulty=easy&type=multiple";
+		GIFAPIurl =
+			"https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" +
+			category.type;
+	} else if (category.type == "geography") {
+		TriviaAPIurl =
+			"https://opentdb.com/api.php?amount=25&category=22&difficulty=easy&type=multiple";
+		GIFAPIurl =
+			"https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" +
+			category.type;
+	} else if (category.type == "film") {
+		TriviaAPIurl =
+			"https://opentdb.com/api.php?amount=25&category=11&difficulty=easy&type=multiple";
+		GIFAPIurl =
+			"https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" +
+			category.type;
+	} else {
+		TriviaAPIurl =
+			"https://opentdb.com/api.php?amount=25&category=9&difficulty=easy&type=multiple";
+		GIFAPIurl =
+			"https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=cat";
+	}
+
+	console.log(GIFAPIurl);
+
 	const MAXQUESTION = 15;
 	const MAXTIMER = 15;
 
@@ -254,7 +283,7 @@ export function PlayQuiz() {
 							</div>
 							<div className="flex justify-center mx-10">
 								<img
-									className="rounded-2xl w-[350px] border-2 border-white"
+									className="rounded-2xl w-[350px] max-h-[300px] border-2 border-white"
 									src={`${GIF}`}
 									alt="GIF"
 								/>

@@ -131,33 +131,37 @@ export function Home() {
 					<div className="-mt-1 scale-100">
 						<div className="container mx-auto">
 							<ClipPaperTitle title="Select Mode" />
-							<div className="mx-4">
+							<div id="selectmode" className="mx-4">
 								<div className="flex flex-col lg:flex-row gap-2 justify-center">
 									<SelectModeCard
 										className="lg:hover:-translate-y-4 lg:hover:-translate-x-5"
 										src="https://www.w3schools.com/html/pic_trulli.jpg"
-										title="Art & Science"
+										title="General Knowledge"
 										description="Uji kemampuanmu dalam ilmu sains!"
+										link="/play/general"
 									/>
 									<SelectModeCard
 										className="lg:hover:-translate-y-4 lg:hover:translate-x-5"
 										src="https://www.w3schools.com/html/pic_trulli.jpg"
-										title="Art & Science"
+										title="Geography"
 										description="Uji kemampuanmu dalam ilmu sains!"
+										link="/play/geography"
 									/>
 								</div>
 								<div className="flex flex-col lg:flex-row gap-2 mt-2 justify-center">
 									<SelectModeCard
 										className="lg:hover:translate-y-4 lg:hover:-translate-x-5"
 										src="https://www.w3schools.com/html/pic_trulli.jpg"
-										title="Art & Science"
+										title="Film"
 										description="Uji kemampuanmu dalam ilmu sains!"
+										link="/play/film"
 									/>
 									<SelectModeCard
 										className="lg:hover:translate-y-4 lg:hover:translate-x-5"
 										src="https://www.w3schools.com/html/pic_trulli.jpg"
-										title="Art & Science"
+										title="Video Game"
 										description="Uji kemampuanmu dalam ilmu sains!"
+										link="/play/videogame"
 									/>
 								</div>
 							</div>

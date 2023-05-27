@@ -6,14 +6,15 @@ import { PlayQuiz } from "./pages/PlayQuiz";
 import "./style/App.css";
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/play" element={<PlayQuiz />} />
-      <Route path="/leaderboard" element={<Leaderboard />} />
-      <Route path="/aboutus" element={<AboutUs />} />
-    </Routes>
-  );
+	return (
+		<Routes>
+			<Route path="/" element={<Home />} />
+			<Route path="/play/" element={<PlayQuiz />} />
+			<Route path="/play/:type" element={<PlayQuiz />} />
+			<Route path="/leaderboard" element={<Leaderboard />} />
+			<Route path="/aboutus" element={<AboutUs />} />
+		</Routes>
+	);
 }
 
 export default App;

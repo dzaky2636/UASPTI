@@ -2,6 +2,7 @@ import { Button } from "@material-tailwind/react";
 import logo from "../assets/logo/logo2.png";
 import playButton from "../assets/play-button.png";
 import "../style/index.css";
+import { Link } from "react-router-dom";
 
 export function NavbarPlay() {
 	return (
@@ -15,12 +16,12 @@ export function NavbarPlay() {
 					<img className="h-8 w-auto" src={logo} alt="UQuizz Logo" />
 				</div>
 				{/* Kanan */}
-				<div className="flex flex-1 justify-end scale-95 lg:scale-100">
+				<Link to="/" className="flex flex-1 justify-end scale-95 lg:scale-100">
 					<Button className="font-semibold text-base text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
 						Quit
 						<img src={playButton} alt="Play Button" className="h-4 w-4 mb-1" />
 					</Button>
-				</div>
+				</Link>
 			</nav>
 		</header>
 	);

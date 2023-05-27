@@ -56,12 +56,14 @@ export function Navbar() {
 					))}
 				</div>
 				{/* Kanan */}
-				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
+				<Link
+					to="/#selectmode"
+					className="hidden lg:flex lg:flex-1 lg:justify-end">
 					<Button className="font-semibold text-base text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
 						Play
 						<img src={playButton} alt="Play Button" className="h-4 w-4 mb-1" />
 					</Button>
-				</div>
+				</Link>
 			</nav>
 			{/* Mobile */}
 			<Dialog
