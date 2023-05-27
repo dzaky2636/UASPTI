@@ -8,7 +8,9 @@ import axios from "axios";
 import { Button } from "@material-tailwind/react";
 import playButton from "../assets/play-button.png";
 
-const TriviaAPIurl = "https://opentdb.com/api.php?amount=14&type=multiple";
+import leaderboardData from "./leaderboard.json";
+
+const TriviaAPIurl = "https://opentdb.com/api.php?amount=21&type=multiple";
 const GIFAPIurl =
 	"https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=art";
 const HelloGIFAPIurl =
@@ -27,7 +29,7 @@ const shuffleArray = (array) => {
 };
 
 export function PlayQuiz() {
-	const MAXQUESTION = 10;
+	const MAXQUESTION = 15;
 	const MAXTIMER = 15;
 
 	const [quizStarted, setQuizStarted] = useState(false);
@@ -38,8 +40,8 @@ export function PlayQuiz() {
 	const [GIF, setGIF] = useState("");
 	const [HelloGIF, setHelloGIF] = useState("");
 	const [AvatarGIF, setAvatarGIF] = useState("");
-	const [newAvatar, setNewAvatar] = useState("");
 	const [shuffledChoices, setShuffledChoices] = useState([]);
+	const [leaderboard, setLeaderboard] = useState([]);
 
 	useEffect(() => {
 		getAllQuiz();
@@ -90,7 +92,7 @@ export function PlayQuiz() {
 	// GIF untuk avatar user
 	useEffect(() => {
 		getAllAvatar();
-	}, [newAvatar]);
+	}, []);
 
 	const getAllAvatar = () => {
 		axios
@@ -123,6 +125,7 @@ export function PlayQuiz() {
 		}
 	}, [timer, questionIndex]);
 
+	// acak soal
 	useEffect(() => {
 		if (questions.length > 0) {
 			const choices = questions[questionIndex].incorrect_answers.concat(
@@ -147,7 +150,7 @@ export function PlayQuiz() {
 
 	let percentageTimer = (timer / MAXTIMER) * 100;
 	var correctAnswer = questions[questionIndex].correct_answer;
-	console.log(correctAnswer);
+	// console.log(correctAnswer);
 
 	function checkAnswer(choiceIndex) {
 		setQuestionIndex((prevIndex) => {
@@ -161,13 +164,50 @@ export function PlayQuiz() {
 		}
 	}
 
-	const newLeaderboard = {
-		name: "",
-		score: "",
-		avatar: "",
-	};
+	// Computer storage leaderboard
+	const handleSubmit = (event) => {
+		event.preventDefault();
 
-	function updateLeaderboard() {}
+		const name = event.target.name.value;
+		const score = event.target.score.value;
+		const avatar = event.target.AvatarGIF.value;
+
+		const newLeaderboardData = { name, score: parseInt(score), avatar };
+
+		var localStorageLeaderboard = localStorage.getItem("leaderboardData");
+		if (localStorageLeaderboard == "") {
+			localStorageLeaderboard = leaderboardData;
+			const unsortedLeaderboardArr = localStorageLeaderboard;
+			setLeaderboard([...unsortedLeaderboardArr, newLeaderboardData]);
+			localStorage.setItem(
+				"leaderboardData",
+				JSON.stringify([...unsortedLeaderboardArr, newLeaderboardData])
+			);
+		} else {
+			const unsortedLeaderboardArr = JSON.parse(localStorageLeaderboard);
+
+			setLeaderboard([...unsortedLeaderboardArr, newLeaderboardData]);
+			localStorage.setItem(
+				"leaderboardData",
+				JSON.stringify([...unsortedLeaderboardArr, newLeaderboardData])
+			);
+		}
+
+		window.location.href = "/leaderboard";
+
+		// const json = JSON.stringify(leaderboard);
+		// const blob = new Blob([json], { type: "application/json" });
+		// const url = URL.createObjectURL(blob);
+		// const link = document.createElement("a");
+		// link.href = url;
+		// link.download = "leaderboard.json";
+		// document.body.appendChild(link);
+		// link.click();
+		// document.body.removeChild(link);
+		// URL.revokeObjectURL(url);
+
+		event.target.reset();
+	};
 
 	return (
 		<div className="">
@@ -260,23 +300,28 @@ export function PlayQuiz() {
 											</div>
 										</div>
 									</div>
-									<input
-										class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-										id="username"
-										type="text"
-										placeholder="Username"></input>
-									<div className="flex justify-center">
-										<Button
-											onClick={updateLeaderboard}
-											className="font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#5381e5]">
-											SUBMIT
-											<img
-												src={playButton}
-												alt="Play Button"
-												className="h-4 w-4 mb-1"
-											/>
-										</Button>
-									</div>
+									<form onSubmit={handleSubmit}>
+										<input type="hidden" name="score" value={score}></input>
+										<input
+											type="hidden"
+											name="AvatarGIF"
+											value={AvatarGIF}></input>
+										<input
+											class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+											id="username"
+											type="text"
+											name="name"
+											minLength={1}
+											maxLength={8}
+											placeholder="Masukkan nama mu.."></input>
+										<div className="flex justify-center">
+											<Button
+												type="submit"
+												className="mt-4 font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#5381e5]">
+												SUBMIT
+											</Button>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>

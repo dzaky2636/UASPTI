@@ -9,15 +9,23 @@ export function LeaderboardItemTop(props) {
 					</div>
 				</div>
 			</div>
-			<img
-				src={`${props.icon}`}
-				className={`-mt-8 flex w-32 h-32 bg-slate-10 rounded-full border-4 ${props.color}`}></img>
+			<div className="flex justify-center">
+				<img
+					src={`${props.icon}`}
+					className={`-mt-8 flex w-32 h-32 bg-slate-10 rounded-full border-4 ${props.color}`}></img>
+			</div>
 			<div className="-mt-8">
 				<div
 					className={`w-12 h-12 px-10 mx-auto rounded-full scale-75 ${props.gradient}`}>
 					<div className="flex justify-center text-white text-xl">
 						<span className="mt-2">{props.score}</span>
 					</div>
+				</div>
+			</div>
+			<div
+				className={`w-full h-10 px-10 mx-auto rounded-full scale-100 ${props.gradient}`}>
+				<div className="flex justify-center text-white text-md">
+					<div className="flex flex-col mt-2">{props.name}</div>
 				</div>
 			</div>
 		</div>
