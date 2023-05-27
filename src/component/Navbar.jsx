@@ -1,33 +1,32 @@
-import { Link } from "react-router-dom";
-import "../style/index.css";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Button } from "@material-tailwind/react";
 import { useState } from "react";
+import homepageicon from "../assets/homepage.png";
+import leaderboardicon from "../assets/leaderboard.png";
+import groupicon from "../assets/group.png";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo/logo2.png";
+import playButton from "../assets/play-button.png";
+import "../style/index.css";
 
 const navigation = [
-	{ name: "Home", to: "/" },
-	{ name: "Leaderboard", to: "/leaderboard" },
-	{ name: "About Us", to: "/aboutus" },
+	{ name: "Home", to: "/", icon: homepageicon },
+	{ name: "Leaderboard", to: "/leaderboard", icon: leaderboardicon },
+	{ name: "About Us", to: "/aboutus", icon: groupicon },
 ];
 
 export function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	return (
-		<header className="fixed inset-x-0 top-0 z-50 bg-cyan-600">
+		<header className="fixed inset-x-0 top-0 z-50 bg-[#30a2a9]">
 			{/* Desktop */}
 			<nav
-				className="flex items-center justify-between p-6 lg:px-8"
+				className="flex items-center justify-between p-2 lg:px-8"
 				aria-label="Global">
 				{/* Logo */}
 				<div className="flex lg:flex-1">
-					<img
-						className="h-8 w-auto"
-						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-						alt=""
-					/>
-					<span class="relative ms-4 bottom-[0.2rem] self-center text-lg lg:text-2xl font-semibold whitespace-nowrap text-white">
-						Quiz Game
-					</span>
+					<img className="h-8 w-auto" src={logo} alt="UQuizz Logo" />
 				</div>
 				{/* Button hamburger */}
 				<div className="flex lg:hidden">
@@ -44,17 +43,27 @@ export function Navbar() {
 						<Link
 							key={item.name}
 							to={item.to}
-							className="text-xl font-semibold leading-6 text-white">
-							{item.name}
+							className="group text-lg font-semibold leading-6 transition ease-in-out text-white hover:scale-110 hover:text-black hover:bg-[#fedf51] p-4 rounded-lg">
+							<div className="flex flex-col gap-2">
+								<div className="flex justify-center">
+									<img
+										src={`${item.icon}`}
+										className="h-5 w-5 invert group-hover:invert-0"></img>
+								</div>
+								{item.name}
+							</div>
 						</Link>
 					))}
 				</div>
 				{/* Kanan */}
-				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-					<a href="#" className="text-sm font-semibold leading-6 text-white">
-						Log in <span aria-hidden="true">&rarr;</span>
-					</a>
-				</div>
+				<Link
+					to="/#selectmode"
+					className="hidden lg:flex lg:flex-1 lg:justify-end">
+					<Button className="font-semibold text-base text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
+						Play
+						<img src={playButton} alt="Play Button" className="h-4 w-4 mb-1" />
+					</Button>
+				</Link>
 			</nav>
 			{/* Mobile */}
 			<Dialog
@@ -69,7 +78,7 @@ export function Navbar() {
 					<div className="flex items-right justify-end">
 						<button
 							type="button"
-							className="-m-2.5 rounded-md p-2.5 text-white"
+							className="-m-2.5 rounded-md p-2.5 text-white hover:text-black hover:bg-[#fedf52]"
 							onClick={() => setMobileMenuOpen(false)}>
 							<XMarkIcon className="h-6 w-6" aria-hidden="true" />
 						</button>
@@ -81,17 +90,15 @@ export function Navbar() {
 									<Link
 										key={item.name}
 										to={item.to}
-										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-black hover:bg-[#fedf51]">
-										{item.name}
+										className="group -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-black hover:bg-[#fedf51]">
+										<div className="flex gap-2">
+											<img
+												src={`${item.icon}`}
+												className="h-5 w-5 invert group-hover:invert-0"></img>
+											{item.name}
+										</div>
 									</Link>
 								))}
-							</div>
-							<div className="py-6">
-								<a
-									href="#"
-									className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-black hover:bg-[#fedf51]">
-									Log in
-								</a>
 							</div>
 						</div>
 					</div>

@@ -9,10 +9,10 @@ export function AboutUsItem(props) {
 				</a>
 
 				<div class="text-center mt-6">
-					<h1 class="text-black text-3xl lg:text-xl font-bold mb-1 min-h-[60px]">
+					<h1 class="text-white text-3xl lg:text-xl font-bold mb-1 min-h-[60px]">
 						{props.nama}
 					</h1>
-					<div class="text-black font-normal mb-2 text-xl lg:text-md">
+					<div class="text-white font-normal mb-2 text-xl lg:text-md">
 						({props.nim})
 					</div>
 					<div className="flex justify-center">

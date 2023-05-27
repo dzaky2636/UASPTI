@@ -1,6 +1,8 @@
-export function Footer() {
+import icon from "../assets/icon/apple-touch-icon.png";
+
+export function Footer(props) {
 	return (
-		<div className="flex flex-col scale-100">
+		<div className={`flex flex-col scale-100 ${props.className}`}>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
 					fill="#5E60CE"
@@ -13,18 +15,14 @@ export function Footer() {
 					<div class="w-full max-w-screen-xl mx-auto p-4 ">
 						<div className="flex flex-row justify-between">
 							<div className="flex">
-								<img
-									src="https://flowbite.com/docs/images/logo.svg"
-									class="h-8 mr-3"
-									alt="Flowbite Logo"
-								/>
+								<img src={icon} class="h-8 mr-3" alt="UQuizz Icon" />
 								<span class="self-center text-md lg:text-2xl font-semibold whitespace-nowrap">
-									Quiz Game
+									UQuizz
 								</span>
 							</div>
 							<div>
 								<span class="hidden lg:inline text-md lg:text-2xl font-semibold ">
-									© 2023 Kelompok 2™ . All Rights Reserved.
+									© 2023 Kelompok 2™. All Rights Reserved.
 								</span>
 								<span class="inline lg:hidden text-md lg:text-2xl font-semibold ">
 									© 2023 Kelompok 2™
