@@ -220,7 +220,7 @@ export function PlayQuiz() {
 						<div className="relative flex flex-col h-screen justify-center gap-4 scale-100 md:scale-90 lg:scale-100 xl:scale-100 2xl:scale-100">
 							<div className="flex justify-center">
 								<div className="flex flex-col gap-5 justify-center">
-									<div className="flex justify-center mx-10">
+									<div className="flex justify-center">
 										<img
 											className="rounded-2xl w-[350px] border-2 border-white"
 											src={`${HelloGIF}`}

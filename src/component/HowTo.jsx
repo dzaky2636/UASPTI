@@ -1,13 +1,19 @@
-export function HowTo() {
+export function HowTo(props) {
 	return (
-		<iframe
-			className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] rounded-lg"
-			width="560"
-			height="315"
-			src="https://www.youtube-nocookie.com/embed/7XzfWHdDS9Q"
-			title="YouTube video player"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			allowfullscreen></iframe>
+		<div className="flex flex-col gap-4 bg-gradient-to-br from-[#5E60CE] to-[#343694] rounded-2xl border-2 border-white shadow p-7 scale-90 lg:scale-100">
+			<div className="flex flex-col gap-4">
+				<div className="flex gap-4">
+					<img
+						className="rounded-2xl border-2 border-white"
+						src={props.image}
+						alt="alt"
+					/>
+				</div>
+			</div>
+			<div className="flex flex-col justify-center gap-2">
+				<div className="text-xl text-white text-center">{props.title}</div>
+				<div className="text-xl text-white">Deskripsi</div>
+			</div>
+		</div>
 	);
 }

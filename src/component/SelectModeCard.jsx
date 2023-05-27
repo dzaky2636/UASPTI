@@ -2,7 +2,11 @@ export function SelectModeCard(props) {
 	return (
 		<div
 			className={`bg-gradient-to-br from-[#4EA8DE] to-[#5E60CE] rounded-2xl border-2 border-white shadow transition ease-in-out scale-100 hover:scale-105 ${props.className}`}>
-			<img class="rounded-t-2xl lg:max-w-[400px]" src={`${props.src}`} alt="" />
+			<img
+				class="rounded-t-2xl w-[110%] lg:max-w-[440px]"
+				src={`${props.src}`}
+				alt=""
+			/>
 			<div className="p-5 flex flex-col gap-2">
 				<div className="text-3xl font-bold text-center">{props.title}</div>
 				<div className="text-lg text-left">{props.description}</div>

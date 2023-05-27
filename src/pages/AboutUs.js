@@ -57,47 +57,49 @@ export function AboutUs() {
 										<p class="text-white text-lg font-normal">Group 2</p>
 									</div>
 								</div>
-								<div class="flex flex-wrap items-center scale-75 lg:scale-100 gap-3 lg:gap-0">
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Batara Hotdo Horas Simbolon"
-										nim="00000078626"
-										github="https://www.google.com/"
-										discord="https://www.google.com/"
-										instagram="https://www.google.com/"
-									/>
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Efri Ramadhan"
-										nim="00000078662"
-										github="https://www.google.com/"
-										discord="https://www.google.com/"
-										instagram="https://www.google.com/"
-									/>
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Raphael Dikstra Satya Prameswara"
-										nim="00000078564"
-										github="https://www.google.com/"
-										discord="https://www.google.com/"
-										instagram="https://www.google.com/"
-									/>
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Dzaky Fatur Rahman"
-										nim="00000089614"
-										github="https://www.google.com/"
-										discord="https://www.google.com/"
-										instagram="https://www.google.com/"
-									/>
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Axel Reginald Wiranto"
-										nim="00000078456"
-										github="https://www.google.com/"
-										discord="https://www.google.com/"
-										instagram="https://www.google.com/"
-									/>
+								<div className="flex justify-center">
+									<div class="relative bottom-[10rem] lg:bottom-auto mx-0 lg:mx-10 flex flex-wrap justify-center items-center scale-75 lg:scale-100 gap-3 lg:gap-2">
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Batara Hotdo Horas Simbolon"
+											nim="00000078626"
+											github="https://www.google.com/"
+											discord="https://www.google.com/"
+											instagram="https://www.google.com/"
+										/>
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Efri Ramadhan"
+											nim="00000078662"
+											github="https://www.google.com/"
+											discord="https://www.google.com/"
+											instagram="https://www.google.com/"
+										/>
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Raphael Dikstra Satya Prameswara"
+											nim="00000078564"
+											github="https://www.google.com/"
+											discord="https://www.google.com/"
+											instagram="https://www.google.com/"
+										/>
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Dzaky Fatur Rahman"
+											nim="00000089614"
+											github="https://www.google.com/"
+											discord="https://www.google.com/"
+											instagram="https://www.google.com/"
+										/>
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Axel Reginald Wiranto"
+											nim="00000078456"
+											github="https://www.google.com/"
+											discord="https://www.google.com/"
+											instagram="https://www.google.com/"
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
