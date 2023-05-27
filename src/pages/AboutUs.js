@@ -1,16 +1,13 @@
 import { Fragment, useState } from "react";
 import { Navbar } from "../component/Navbar";
-
 import {
 	Accordion,
 	AccordionBody,
 	AccordionHeader,
 } from "@material-tailwind/react";
-import { Footer } from "../component/Footer";
 import { AboutUsItem } from "../component/AboutUsItem";
-
 import { ClipPaperTitle2 } from "../component/ClipPaperTitle2";
-
+import icon from "../assets/icon/apple-touch-icon.png";
 function Icon({ id, open }) {
 	return (
 		<svg
@@ -181,13 +178,9 @@ export function AboutUs() {
 					<div class="w-full max-w-screen-xl mx-auto p-4 ">
 						<div className="flex flex-row justify-between">
 							<div className="flex">
-								<img
-									src="https://flowbite.com/docs/images/logo.svg"
-									class="h-8 mr-3"
-									alt="Flowbite Logo"
-								/>
+								<img src={icon} class="h-8 mr-3" alt="UQuizz Icon" />
 								<span class="self-center text-md lg:text-2xl font-semibold whitespace-nowrap">
-									Quiz Game
+									UQuizz
 								</span>
 							</div>
 							<div>
