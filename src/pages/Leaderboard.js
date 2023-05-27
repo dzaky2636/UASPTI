@@ -3,16 +3,26 @@ import { LeaderboardItem } from "../component/LeaderboardItem";
 import { LeaderboardItemTop } from "../component/LeaderboardItemTop";
 import { Navbar } from "../component/Navbar";
 
-import leaderboard from "./leaderboard.json";
+import leaderboardJSONFILE from "./leaderboard.json";
 
 export function Leaderboard() {
-	const localStorageLeaderboard = localStorage.getItem("leaderboardData");
-	const unsortedLeaderboardArr = JSON.parse(localStorageLeaderboard);
+	var localStorageLeaderboard = localStorage.getItem("leaderboardData");
+	var unsortedLeaderboardArr = [];
+	// if localstorage is empty
+	if (localStorageLeaderboard == null) {
+		localStorage.setItem(
+			"leaderboardData",
+			JSON.stringify(leaderboardJSONFILE)
+		);
+		console.log(localStorage.getItem("leaderboardData"));
+	} // if localstorage is there
+	else {
+		unsortedLeaderboardArr = JSON.parse(localStorageLeaderboard);
+	}
+
 	const sortedLeaderboardArr = unsortedLeaderboardArr.sort(
 		(a, b) => b.score - a.score
 	);
-
-	console.log(localStorage);
 
 	return (
 		<div>

@@ -204,7 +204,8 @@ export function PlayQuiz() {
 		const newLeaderboardData = { name, score: parseInt(score), avatar };
 
 		var localStorageLeaderboard = localStorage.getItem("leaderboardData");
-		if (localStorageLeaderboard == "") {
+		if (localStorageLeaderboard == null) {
+			console.log("1");
 			localStorageLeaderboard = leaderboardData;
 			const unsortedLeaderboardArr = localStorageLeaderboard;
 			setLeaderboard([...unsortedLeaderboardArr, newLeaderboardData]);
@@ -213,6 +214,7 @@ export function PlayQuiz() {
 				JSON.stringify([...unsortedLeaderboardArr, newLeaderboardData])
 			);
 		} else {
+			console.log("2");
 			const unsortedLeaderboardArr = JSON.parse(localStorageLeaderboard);
 
 			setLeaderboard([...unsortedLeaderboardArr, newLeaderboardData]);
