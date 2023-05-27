@@ -36,6 +36,7 @@ export function AboutUs() {
 		<div className="text-white">
 			<Navbar />
 
+<<<<<<< Updated upstream
 			{/* Team Section */}
 
 			<div class="flex items-center justify-center min-h-screeny py-5">
@@ -374,6 +375,57 @@ export function AboutUs() {
 											</div>
 										</div>
 									</div>
+=======
+						<div class="flex flex-col mt-8">
+							<div class="container max-w-7xl">
+								<div class="flex justify-center text-center lg:mb-12 scale-100">
+									<div class="w-full lg:w-6/12 px-4">
+										<h1 class="text-black text-7xl font-bold mb-8">Our Team</h1>
+										<p class="text-black text-lg font-normal">Group 2</p>
+									</div>
+								</div>
+								<div class="flex flex-wrap items-center scale-75 lg:scale-100 gap-3 lg:gap-0">
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Batara Hotdo Horas Simbolon"
+										nim="00000078626"
+										github="https://www.github.com/batarah07d0"
+										discord="https://discord.com/users/LEGION#1951"
+										instagram="http://www.instagram.com/batara.hotdo"
+									/>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Efri Ramadhan"
+										nim="00000078662"
+										github="https://github.com/efriramadhan"
+										discord="https://discord.com/users/Efri#5854"
+										instagram="https://www.instagram.com/efrir_/"
+									/>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Raphael Dikstra Satya Prameswara"
+										nim="00000078564"
+										github="https://github.com/Rekmast"
+										discord="https://discord.com/users/wiuwiu#7300"
+										instagram="https://www.instagram.com/rdyzee_983/"
+									/>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Dzaky Fatur Rahman"
+										nim="00000089614"
+										github="https://github.com/dzaky2636"
+										discord="https://discord.com/users/-Key-#1906"
+										instagram="https://www.instagram.com/dzakyfaturr/"
+									/>
+									<AboutUsItem
+										foto="https://www.w3schools.com/html/pic_trulli.jpg"
+										nama="Axel Reginald Wiranto"
+										nim="00000078456"
+										github="https://github.com/mOdrA40"
+										discord="https://discord.com/users/Mossad#0636"
+										instagram="https://www.instagram.com/axel_modra40/"
+									/>
+>>>>>>> Stashed changes
 								</div>
 							</div>
 						</div>
