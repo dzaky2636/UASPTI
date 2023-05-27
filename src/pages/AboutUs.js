@@ -1,5 +1,4 @@
 import { Fragment, useState } from "react";
-import avatar from "../assets/avatar.png";
 import { Navbar } from "../component/Navbar";
 
 import {
