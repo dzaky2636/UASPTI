@@ -9,6 +9,8 @@ import {
 import { Footer } from "../component/Footer";
 import { AboutUsItem } from "../component/AboutUsItem";
 
+import { ClipPaperTitle2 } from "../component/ClipPaperTitle2";
+
 function Icon({ id, open }) {
 	return (
 		<svg
@@ -51,53 +53,59 @@ export function AboutUs() {
 						<div class="flex flex-col mt-8">
 							<div class="container max-w-7xl">
 								<div class="flex justify-center text-center lg:mb-12 scale-100">
-									<div class="w-full lg:w-6/12 px-4">
-										<h1 class="text-white text-7xl font-bold mb-8">Our Team</h1>
-										<p class="text-white text-lg font-normal">Group 2</p>
+									<div className="scale-90 lg:scale-105">
+										<ClipPaperTitle2
+											title={
+												<div>
+													<h1>Our Team</h1>
+													<h1 className="scale-75">Group 2</h1>
+												</div>
+											}
+										/>
 									</div>
 								</div>
 								<div className="flex justify-center">
 									<div class="relative bottom-[10rem] lg:bottom-auto mx-0 lg:mx-10 flex flex-wrap justify-center items-center scale-75 lg:scale-100 gap-3 lg:gap-2">
 										<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Batara Hotdo Horas Simbolon"
-										nim="00000078626"
-										github="https://www.github.com/batarah07d0"
-										discord="https://discord.com/users/LEGION#1951"
-										instagram="http://www.instagram.com/batara.hotdo"
-									/>
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Efri Ramadhan"
-										nim="00000078662"
-										github="https://github.com/efriramadhan"
-										discord="https://discord.com/users/Efri#5854"
-										instagram="https://www.instagram.com/efrir_/"
-									/>
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Raphael Dikstra Satya Prameswara"
-										nim="00000078564"
-										github="https://github.com/Rekmast"
-										discord="https://discord.com/users/wiuwiu#7300"
-										instagram="https://www.instagram.com/rdyzee_983/"
-									/>
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Dzaky Fatur Rahman"
-										nim="00000089614"
-										github="https://github.com/dzaky2636"
-										discord="https://discord.com/users/-Key-#1906"
-										instagram="https://www.instagram.com/dzakyfaturr/"
-									/>
-									<AboutUsItem
-										foto="https://www.w3schools.com/html/pic_trulli.jpg"
-										nama="Axel Reginald Wiranto"
-										nim="00000078456"
-										github="https://github.com/mOdrA40"
-										discord="https://discord.com/users/Mossad#0636"
-										instagram="https://www.instagram.com/axel_modra40/"
-									/>
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Batara Hotdo Horas Simbolon"
+											nim="00000078626"
+											github="https://www.github.com/batarah07d0"
+											discord="https://discord.com/users/LEGION#1951"
+											instagram="http://www.instagram.com/batara.hotdo"
+										/>
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Efri Ramadhan"
+											nim="00000078662"
+											github="https://github.com/efriramadhan"
+											discord="https://discord.com/users/Efri#5854"
+											instagram="https://www.instagram.com/efrir_/"
+										/>
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Raphael Dikstra Satya Prameswara"
+											nim="00000078564"
+											github="https://github.com/Rekmast"
+											discord="https://discord.com/users/wiuwiu#7300"
+											instagram="https://www.instagram.com/rdyzee_983/"
+										/>
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Dzaky Fatur Rahman"
+											nim="00000089614"
+											github="https://github.com/dzaky2636"
+											discord="https://discord.com/users/-Key-#1906"
+											instagram="https://www.instagram.com/dzakyfaturr/"
+										/>
+										<AboutUsItem
+											foto="https://www.w3schools.com/html/pic_trulli.jpg"
+											nama="Axel Reginald Wiranto"
+											nim="00000078456"
+											github="https://github.com/mOdrA40"
+											discord="https://discord.com/users/Mossad#0636"
+											instagram="https://www.instagram.com/axel_modra40/"
+										/>
 									</div>
 								</div>
 							</div>
