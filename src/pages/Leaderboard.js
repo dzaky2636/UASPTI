@@ -3,7 +3,14 @@ import { LeaderboardItem } from "../component/LeaderboardItem";
 import { LeaderboardItemTop } from "../component/LeaderboardItemTop";
 import { Navbar } from "../component/Navbar";
 
+import leaderboard from "./leaderboard.json";
+
 export function Leaderboard() {
+	const unsortedLeaderboardArr = leaderboard;
+	const sortedLeaderboardArr = unsortedLeaderboardArr.sort(
+		(a, b) => b.score - a.score
+	);
+
 	return (
 		<div>
 			<Navbar />
@@ -13,89 +20,45 @@ export function Leaderboard() {
 					<h1 className="text-5xl lg:text-6xl font-bold text-center pt-32 text-white scale-100">
 						Leaderboard
 					</h1>
-					<div className="flex flex-wrap gap-2 lg:gap-4 justify-center pt-8 text-white scale-100">
-						<button className="p-2 px-4 lg:px-12 rounded-full font-bold text-md lg:text-lg border-4 border-blue-800 bg-blue-500 hover:bg-indigo-500 transition ease-in-out hover:-translate-y-1 hover:scale-110">
-							Kategori
-						</button>
-						<button className="p-2 px-4 lg:px-12 rounded-full font-bold text-md lg:text-lg border-4 border-blue-800 bg-blue-500 hover:bg-indigo-500 transition ease-in-out hover:-translate-y-1 hover:scale-110">
-							Kategori
-						</button>
-						<button className="p-2 px-4 lg:px-12 rounded-full font-bold text-md lg:text-lg border-4 border-blue-800 bg-blue-500 hover:bg-indigo-500 transition ease-in-out hover:-translate-y-1 hover:scale-110">
-							Kategori
-						</button>
-						<button className="p-2 px-4 lg:px-12 rounded-full font-bold text-md lg:text-lg border-4 border-blue-800 bg-blue-500 hover:bg-indigo-500 transition ease-in-out hover:-translate-y-1 hover:scale-110">
-							Kategori
-						</button>
-					</div>
 					<div className="flex gap-0 lg:gap-5 justify-center pt-10 z-10 transition ease-in-out scale-100 lg:scale-125">
 						<LeaderboardItemTop
 							no="1"
+							score={sortedLeaderboardArr[0].score}
+							icon={sortedLeaderboardArr[0].avatar}
 							className="order-2 scale-100"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
-							score="100"
 							color="bg-yellow-400 border-yellow-400"
 							gradient="border-2 border-[#f4c437] bg-gradient-to-br from-[#ffef95] to-[#f4c437]"
 						/>
 						<LeaderboardItemTop
 							no="2"
+							score={sortedLeaderboardArr[1].score}
+							icon={sortedLeaderboardArr[1].avatar}
 							className="order-1 scale-75"
-							score="100"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							color="bg-[#afafaf] border-[#afafaf]"
 							gradient="border-2 border-[#b0b0b0] bg-gradient-to-br from-[#cfcfcf] to-[#b0b0b0]"
 						/>
 						<LeaderboardItemTop
 							no="3"
+							score={sortedLeaderboardArr[2].score}
+							icon={sortedLeaderboardArr[2].avatar}
 							className="order-3 scale-75"
-							score="100"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
 							color="bg-[#aa895b] border-[#aa895b]"
 							gradient="border-2 border-[#af8f5a] bg-gradient-to-br from-[#d3bda0] to-[#af8f5a]"
 						/>
 					</div>
 					<div className="flex gap-4 flex-col pt-10 transition ease-in-out">
-						<LeaderboardItem
-							no="4"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
-							nama="John Thor"
-							score="100"
-						/>
-						<LeaderboardItem
-							no="5"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
-							nama="John Thor"
-							score="100"
-						/>
-						<LeaderboardItem
-							no="6"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
-							nama="John Thor"
-							score="100"
-						/>
-						<LeaderboardItem
-							no="7"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
-							nama="John Thor"
-							score="100"
-						/>
-						<LeaderboardItem
-							no="8"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
-							nama="John Thor"
-							score="100"
-						/>
-						<LeaderboardItem
-							no="9"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
-							nama="John Thor"
-							score="100"
-						/>
-						<LeaderboardItem
-							no="10"
-							icon="https://www.w3schools.com/html/pic_trulli.jpg"
-							nama="John Thor"
-							score="100"
-						/>
+						{sortedLeaderboardArr.map((leaderboard, index) => {
+							if (index > 2) {
+								return (
+									<LeaderboardItem
+										no={index}
+										icon={leaderboard.avatar}
+										nama={leaderboard.name}
+										score={leaderboard.score}
+									/>
+								);
+							}
+						})}
 					</div>
 				</div>
 				<Footer />

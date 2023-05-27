@@ -1,5 +1,4 @@
 import { Button } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
 import logo from "../assets/logo/logo2.png";
 import playButton from "../assets/play-button.png";
 import "../style/index.css";
