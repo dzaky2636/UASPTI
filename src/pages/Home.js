@@ -119,7 +119,7 @@ export function Home() {
 				</div>
 				{/* Bagian 3 */}
 				<div className="relative bottom-[15rem] lg:bottom-[25.5rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
-					<div className="bgPage w-full h-[88rem] lg:h-[140rem] z-0"></div>
+					<div className="bgPage w-full h-[88rem] lg:h-[170rem] z-0"></div>
 					<div className="scale-100">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 							<path
