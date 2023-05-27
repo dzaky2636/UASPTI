@@ -2,6 +2,7 @@ import { Footer } from "../component/Footer";
 import { LeaderboardItem } from "../component/LeaderboardItem";
 import { LeaderboardItemTop } from "../component/LeaderboardItemTop";
 import { Navbar } from "../component/Navbar";
+import { Link } from "react-router-dom";
 
 import leaderboardJSONFILE from "./leaderboard.json";
 
@@ -14,7 +15,6 @@ export function Leaderboard() {
 			"leaderboardData",
 			JSON.stringify(leaderboardJSONFILE)
 		);
-		console.log(localStorage.getItem("leaderboardData"));
 	} // if localstorage is there
 	else {
 		unsortedLeaderboardArr = JSON.parse(localStorageLeaderboard);
@@ -36,6 +36,7 @@ export function Leaderboard() {
 					<div className="flex gap-0 lg:gap-5 justify-center pt-10 z-10 transition ease-in-out scale-100 lg:scale-125">
 						<LeaderboardItemTop
 							no="1"
+							id={sortedLeaderboardArr[0].id}
 							score={sortedLeaderboardArr[0].score}
 							icon={sortedLeaderboardArr[0].avatar}
 							name={sortedLeaderboardArr[0].name}
@@ -45,6 +46,7 @@ export function Leaderboard() {
 						/>
 						<LeaderboardItemTop
 							no="2"
+							id={sortedLeaderboardArr[1].id}
 							score={sortedLeaderboardArr[1].score}
 							icon={sortedLeaderboardArr[1].avatar}
 							name={sortedLeaderboardArr[1].name}
@@ -54,6 +56,7 @@ export function Leaderboard() {
 						/>
 						<LeaderboardItemTop
 							no="3"
+							id={sortedLeaderboardArr[2].id}
 							score={sortedLeaderboardArr[2].score}
 							icon={sortedLeaderboardArr[2].avatar}
 							name={sortedLeaderboardArr[2].name}
@@ -68,6 +71,7 @@ export function Leaderboard() {
 								return (
 									<LeaderboardItem
 										no={index}
+										id={leaderboard.id}
 										icon={leaderboard.avatar}
 										nama={leaderboard.name}
 										score={leaderboard.score}

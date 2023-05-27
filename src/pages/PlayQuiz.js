@@ -71,6 +71,7 @@ export function PlayQuiz() {
 	const [AvatarGIF, setAvatarGIF] = useState("");
 	const [shuffledChoices, setShuffledChoices] = useState([]);
 	const [leaderboard, setLeaderboard] = useState([]);
+	const [inputValue, setInputValue] = useState("");
 
 	useEffect(() => {
 		getAllQuiz();
@@ -165,6 +166,10 @@ export function PlayQuiz() {
 		}
 	}, [questionIndex, questions]);
 
+	const handleChange = (event) => {
+		setInputValue(event.target.value);
+	};
+
 	if (questions == "") {
 		return <LoadingScreen />;
 	}
@@ -201,22 +206,21 @@ export function PlayQuiz() {
 		const score = event.target.score.value;
 		const avatar = event.target.AvatarGIF.value;
 
-		const newLeaderboardData = { name, score: parseInt(score), avatar };
-
 		var localStorageLeaderboard = localStorage.getItem("leaderboardData");
 		if (localStorageLeaderboard == null) {
-			console.log("1");
 			localStorageLeaderboard = leaderboardData;
 			const unsortedLeaderboardArr = localStorageLeaderboard;
+			const id = unsortedLeaderboardArr.length;
+			const newLeaderboardData = { id, name, score: parseInt(score), avatar };
 			setLeaderboard([...unsortedLeaderboardArr, newLeaderboardData]);
 			localStorage.setItem(
 				"leaderboardData",
 				JSON.stringify([...unsortedLeaderboardArr, newLeaderboardData])
 			);
 		} else {
-			console.log("2");
 			const unsortedLeaderboardArr = JSON.parse(localStorageLeaderboard);
-
+			const id = unsortedLeaderboardArr.length;
+			const newLeaderboardData = { id, name, score: parseInt(score), avatar };
 			setLeaderboard([...unsortedLeaderboardArr, newLeaderboardData]);
 			localStorage.setItem(
 				"leaderboardData",
@@ -344,14 +348,18 @@ export function PlayQuiz() {
 											name="name"
 											minLength={1}
 											maxLength={8}
+											value={inputValue}
+											onChange={handleChange}
 											placeholder="Masukkan nama mu.."></input>
-										<div className="flex justify-center">
-											<Button
-												type="submit"
-												className="mt-4 font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#5381e5]">
-												SUBMIT
-											</Button>
-										</div>
+										{inputValue.length > 0 && (
+											<div className="flex justify-center">
+												<Button
+													type="submit"
+													className="mt-4 font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#5381e5]">
+													SUBMIT
+												</Button>
+											</div>
+										)}
 									</form>
 								</div>
 							</div>

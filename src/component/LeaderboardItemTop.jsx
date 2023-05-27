@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export function LeaderboardItemTop(props) {
 	return (
 		<div className={`flex flex-col justify-center ${props.className}`}>
@@ -25,7 +26,9 @@ export function LeaderboardItemTop(props) {
 			<div
 				className={`w-full h-10 px-10 mx-auto rounded-full scale-100 ${props.gradient}`}>
 				<div className="flex justify-center text-white text-md">
-					<div className="flex flex-col mt-2">{props.name}</div>
+					<div className="flex flex-col mt-2">
+						<Link to={`/leaderboard/${props.id}`}>{props.name}</Link>
+					</div>
 				</div>
 			</div>
 		</div>
