@@ -1,7 +1,14 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { LoadingScreen } from "../component/LoadingScreen";
 import { NavbarPlay } from "../component/NavbarPlay";
 import { QuizAnswerButton } from "../component/QuizAnswerButton";
+
+import { Button } from "@material-tailwind/react";
+import playButton from "../assets/play-button.png";
+
+import leaderboardData from "./leaderboard.json";
 
 const HelloGIFAPIurl =
   "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=hello";

@@ -1,4 +1,5 @@
 import { Fragment, useState } from "react";
+import icon from "../assets/icon/android-chrome-512x512.png";
 import { Navbar } from "../component/Navbar";
 
 import {
@@ -40,7 +41,7 @@ export function AboutUs() {
         {/* Team Section */}
         <div class="flex items-center justify-center min-h-screeny py-5">
           <div class="flex flex-col">
-            <span class="text-center font-bold my-10 opacity-30">
+            <span class="text-center font-bold opacity-30">
               <hr class="my-4"></hr>
               <a
                 href="https://egoistdeveloper.github.io/twcss-to-sass-playground/"
@@ -49,7 +50,7 @@ export function AboutUs() {
               ></a>
             </span>
 
-            <div class="flex flex-col mt-8">
+            <div class="flex flex-col lg:mt-8">
               <div class="container max-w-7xl">
                 <div class="flex justify-center text-center lg:mb-12 scale-100">
                   <div className="scale-90 lg:scale-105">
@@ -64,7 +65,7 @@ export function AboutUs() {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div class="relative bottom-[10rem] lg:bottom-auto mx-0 lg:mx-10 flex flex-wrap justify-center items-center scale-75 lg:scale-100 gap-3 lg:gap-2">
+                  <div class="relative bottom-[10rem] lg:bottom-auto mx-0 lg:mx-10 flex flex-wrap justify-center items-center scale-90 lg:scale-100 gap-3 lg:gap-2">
                     <AboutUsItem
                       foto={require("../assets/Batara.png")}
                       nama="Batara Hotdo Horas Simbolon"
@@ -132,44 +133,49 @@ export function AboutUs() {
               <Fragment>
                 <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
                   <AccordionHeader
-                    className="bg-[#6930C3] border-2 border-[#7400B8] p-6 rounded-t-xl text-white"
+                    className="bg-[#21228a] border-2 border-black p-6 rounded-t-xl text-white hover:text-white"
                     onClick={() => handleOpen(1)}
                   >
-                    What is Material Tailwind?
+                    What Framework Did You Use?
                   </AccordionHeader>
-                  <AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white text-xl">
-                    We&apos;re not always in the position that we want to be at.
-                    We&apos;re constantly growing. We&apos;re constantly making
-                    mistakes. We&apos;re constantly trying to express ourselves
-                    and actualize our dreams.
+                  <AccordionBody className="bg-[#04042d] border-2 border-black p-6 text-white text-md">
+                    We use React.JS for JavaScript Framework and Tailwind CSS
+                    for CSS Framework.
                   </AccordionBody>
                 </Accordion>
                 <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
                   <AccordionHeader
-                    className="bg-[#6930C3] border-2 border-[#7400B8] p-6 text-white"
+                    className="bg-[#21228a] border-2 border-black p-6 text-white hover:text-white"
                     onClick={() => handleOpen(2)}
                   >
-                    What is Material Tailwind?
+                    What API Did You Use?
                   </AccordionHeader>
-                  <AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white text-xl">
-                    We&apos;re not always in the position that we want to be at.
-                    We&apos;re constantly growing. We&apos;re constantly making
-                    mistakes. We&apos;re constantly trying to express ourselves
-                    and actualize our dreams.
+                  <AccordionBody className="bg-[#04042d] border-2 border-black p-6 text-white text-md">
+                    We use OpenTriviaDB "https://opentdb.com/" for generate
+                    question and Giphy "https://developers.giphy.com/explorer/"
+                    for random GIF that use for profile picture.
                   </AccordionBody>
                 </Accordion>
                 <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
                   <AccordionHeader
-                    className="bg-[#6930C3] border-2 border-[#7400B8] p-6 text-white"
+                    className="bg-[#21228a] border-2 border-black p-6 text-white hover:text-white focus:rounded-b-[0px]"
                     onClick={() => handleOpen(3)}
                   >
-                    What is Material Tailwind?
+                    What Font Did You Use?
                   </AccordionHeader>
-                  <AccordionBody className="bg-[#5E60CE] border-2 border-[#7400B8] p-6 text-white rounded-b-xl text-xl">
-                    We&apos;re not always in the position that we want to be at.
-                    We&apos;re constantly growing. We&apos;re constantly making
-                    mistakes. We&apos;re constantly trying to express ourselves
-                    and actualize our dreams.
+                  <AccordionBody className="bg-[#04042d] border-2 border-black p-6 text-white text-md">
+                    We use Comic Neue for our website.
+                  </AccordionBody>
+                </Accordion>
+                <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
+                  <AccordionHeader
+                    className="bg-[#21228a] border-2 border-black p-6 rounded-b-xl text-white hover:text-white focus:rounded-b-[0px]"
+                    onClick={() => handleOpen(4)}
+                  >
+                    What Was Your Purpose in Making This Website?
+                  </AccordionHeader>
+                  <AccordionBody className="bg-[#04042d] border-2 border-black p-6 rounded-b-xl text-white text-md">
+                    For Final Exam in Introduction to Internet Technology Class.
                   </AccordionBody>
                 </Accordion>
               </Fragment>
@@ -178,7 +184,7 @@ export function AboutUs() {
         </div>
       </div>
       {/* Footer */}
-      <div className="bg-[#5E60CE] text-white py-10">
+      <div className="bg-[#5E60CE] text-white py-1">
         <footer class="m-4">
           <hr className="border-white" />
           <div class="w-full max-w-screen-xl mx-auto p-4 ">

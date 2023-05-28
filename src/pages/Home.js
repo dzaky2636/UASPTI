@@ -1,5 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import geo from "../assets/select mode bg/GEO.webp";
+import general from "../assets/select mode bg/General Knowledge.jpeg";
+import film from "../assets/select mode bg/Movie.jpg";
+import game from "../assets/select mode bg/game.jpg.webp";
 import { ClipPaperTitle } from "../component/ClipPaperTitle";
 import { FlexboxBox } from "../component/FlexboxBox";
 import { Footer } from "../component/Footer";
@@ -91,7 +95,7 @@ export function Home() {
                 <div className="flex justify-center transition ease-in-out hover:scale-105 hover:translate-y-2">
                   <a
                     onClick={handleClick}
-                    class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-[#53cde5] rounded-lg hover:bg-[#429eb1] focus:ring-4 focus:outline-none focus:ring-blue-300 scale-100 hover:scale-110"
+                    class="animate-bounce inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-[#ce5a83] rounded-lg hover:bg-[#fedf52] hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 scale-100 hover:scale-110"
                   >
                     REFRESH
                     <svg
@@ -132,33 +136,33 @@ export function Home() {
             <div className="container mx-auto">
               <ClipPaperTitle title="Select Mode" />
               <div id="selectmode" className="mx-4">
-                <div className="flex flex-col lg:flex-row gap-2 justify-center">
+                <div className="flex flex-col lg:flex-row gap-5 justify-center">
                   <SelectModeCard
                     className="lg:hover:-translate-y-4 lg:hover:-translate-x-5"
-                    src="https://www.w3schools.com/html/pic_trulli.jpg"
+                    src={general}
                     title="General Knowledge"
                     description="Uji kemampuanmu dalam ilmu sains!"
                     link="/play/general"
                   />
                   <SelectModeCard
                     className="lg:hover:-translate-y-4 lg:hover:translate-x-5"
-                    src="https://www.w3schools.com/html/pic_trulli.jpg"
+                    src={geo}
                     title="Geography"
                     description="Uji kemampuanmu dalam ilmu sains!"
                     link="/play/geography"
                   />
                 </div>
-                <div className="flex flex-col lg:flex-row gap-2 mt-2 justify-center">
+                <div className="flex flex-col lg:flex-row gap-5 mt-5 justify-center">
                   <SelectModeCard
                     className="lg:hover:translate-y-4 lg:hover:-translate-x-5"
-                    src="https://www.w3schools.com/html/pic_trulli.jpg"
+                    src={film}
                     title="Film"
                     description="Uji kemampuanmu dalam ilmu sains!"
                     link="/play/film"
                   />
                   <SelectModeCard
                     className="lg:hover:translate-y-4 lg:hover:translate-x-5"
-                    src="https://www.w3schools.com/html/pic_trulli.jpg"
+                    src={game}
                     title="Video Game"
                     description="Uji kemampuanmu dalam ilmu sains!"
                     link="/play/videogame"

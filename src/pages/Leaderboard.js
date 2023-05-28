@@ -30,10 +30,10 @@ export function Leaderboard() {
       <div className="bg-gradient-to-b from-[#CAF0F8] to-[#48CAE4] -z-50">
         <div className="bgPage w-full h-full z-0"></div>
         <div className="container mx-auto z-20">
-          <div className="relative top-14 lg:top-20 scale-90 lg:scale-105">
+          <div className="relative lg:top-20 scale-75 lg:scale-105">
             <ClipPaperTitle2 title="Leaderboard" />
           </div>
-          <div className="flex gap-0 lg:gap-5 justify-center pt-10 z-10 transition ease-in-out scale-100 lg:scale-125">
+          <div className="flex gap-0 lg:gap-5 justify-center lg:pt-10 z-10 transition ease-in-out scale-100 lg:scale-125">
             <LeaderboardItemTop
               no="1"
               id={sortedLeaderboardArr[0].id}

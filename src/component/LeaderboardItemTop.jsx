@@ -6,7 +6,7 @@ export function LeaderboardItemTop(props) {
         <div
           className={`w-12 h-12 p-2 mx-auto rounded-full scale-100 ${props.gradient}`}
         >
-          <div className="flex justify-center text-white text-xl">
+          <div className="flex justify-center text-black text-xl">
             {props.no}
           </div>
         </div>
@@ -21,7 +21,7 @@ export function LeaderboardItemTop(props) {
         <div
           className={`w-12 h-12 px-10 mx-auto rounded-full scale-75 ${props.gradient}`}
         >
-          <div className="flex justify-center text-white text-xl">
+          <div className="flex justify-center text-black text-xl">
             <span className="mt-2">{props.score}</span>
           </div>
         </div>
@@ -29,7 +29,7 @@ export function LeaderboardItemTop(props) {
       <div
         className={`w-full h-10 px-10 mx-auto rounded-full scale-100 ${props.gradient}`}
       >
-        <div className="flex justify-center text-white text-md">
+        <div className="flex justify-center text-black text-md">
           <div className="flex flex-col mt-2">
             <Link to={`/leaderboard/${props.id}`}>{props.name}</Link>
           </div>

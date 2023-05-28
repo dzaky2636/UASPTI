@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export function SelectModeCard(props) {
   return (
     <div
-      className={`bg-gradient-to-br from-[#4EA8DE] to-[#5E60CE] rounded-2xl border-2 border-white shadow transition ease-in-out scale-100 hover:scale-105 ${props.className}`}
+      className={`bg-gradient-to-br from-[#30a2a9] to-[#5E60CE] rounded-2xl border-4 border-white shadow transition ease-in-out scale-100 hover:scale-105 ${props.className} hover:border-[#fedf52]`}
     >
       <img
         class="rounded-t-2xl w-[110%] lg:max-w-[440px]"
@@ -17,9 +17,9 @@ export function SelectModeCard(props) {
           <Link
             to={props.link}
             href="#"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class="inline-flex items-center px-3 py-2 text-sm font-semibold text-center text-white bg-[#ce5a83] rounded-lg  hover:bg-[#fedf52] hover:text-black focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            MULAI!
+            START!
             <svg
               aria-hidden="true"
               class="w-4 h-4 ml-2 -mr-1"

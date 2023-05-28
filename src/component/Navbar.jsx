@@ -45,7 +45,7 @@ export function Navbar() {
             <Link
               key={item.name}
               to={item.to}
-              className="group text-sm font-semibold leading-5 transition ease-in-out text-white hover:scale-110 hover:text-black hover:bg-[#fedf51] p-2 rounded-lg"
+              className="group text-2xl font-semibold leading-5 transition ease-in-out text-white hover:scale-110 hover:text-black hover:bg-[#fedf51] p-2 rounded-lg"
             >
               <div className="flex flex-col gap-2">
                 <div className="flex justify-center">

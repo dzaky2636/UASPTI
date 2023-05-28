@@ -9,12 +9,12 @@ export function RandomTrivia(props) {
         <div className="flex gap-4 -me-40">
           <img class="rounded-2xl max-w-[10%]" src={quizpng} alt="" />
           <div className="flex flex-col justify-center">
-            <div className="text-4xl">Did you know?</div>
+            <div className="text-[4vh]">Did you know?</div>
           </div>
         </div>
         <div className="flex flex-col gap-2">
           <div
-            className="text-2xl font-bold"
+            className="text-[3vh] font-bold"
             dangerouslySetInnerHTML={{ __html: props.category }}
           ></div>
           <div
