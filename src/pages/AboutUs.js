@@ -1,5 +1,4 @@
 import { Fragment, useState } from "react";
-import icon from "../assets/icon/android-chrome-512x512.png";
 import { Navbar } from "../component/Navbar";
 
 import {
@@ -8,7 +7,7 @@ import {
   AccordionHeader,
 } from "@material-tailwind/react";
 import { AboutUsItem } from "../component/AboutUsItem";
-
+import { ClipPaperTitle2 } from "../component/ClipPaperTitle2";
 function Icon({ id, open }) {
   return (
     <svg
@@ -53,52 +52,60 @@ export function AboutUs() {
             <div class="flex flex-col mt-8">
               <div class="container max-w-7xl">
                 <div class="flex justify-center text-center lg:mb-12 scale-100">
-                  <div class="w-full lg:w-6/12 px-4">
-                    <h1 class="text-white text-5xl font-bold mb-2">Our Team</h1>
-                    <p class="text-white text-lg font-normal mb-6">Group 2</p>
+                  <div className="scale-90 lg:scale-105">
+                    <ClipPaperTitle2
+                      title={
+                        <div>
+                          <h1>Our Team</h1>
+                          <h1 className="scale-75">Group 2</h1>
+                        </div>
+                      }
+                    />
                   </div>
                 </div>
-                <div class="flex flex-wrap scale-100">
-                  <AboutUsItem
-                    foto="https://www.w3schools.com/html/pic_trulli.jpg"
-                    nama="Batara Hotdo Horas Simbolon"
-                    nim="00000078626"
-                    github="https://www.google.com/"
-                    discord="https://www.google.com/"
-                    instagram="https://www.google.com/"
-                  />
-                  <AboutUsItem
-                    foto="https://www.w3schools.com/html/pic_trulli.jpg"
-                    nama="Efri Ramadhan"
-                    nim="00000078662"
-                    github="https://www.google.com/"
-                    discord="https://www.google.com/"
-                    instagram="https://www.google.com/"
-                  />
-                  <AboutUsItem
-                    foto="https://www.w3schools.com/html/pic_trulli.jpg"
-                    nama="Raphael Dikstra Satya Prameswara"
-                    nim="00000078564"
-                    github="https://www.google.com/"
-                    discord="https://www.google.com/"
-                    instagram="https://www.google.com/"
-                  />
-                  <AboutUsItem
-                    foto="https://www.w3schools.com/html/pic_trulli.jpg"
-                    nama="Dzaky Fatur Rahman"
-                    nim="00000089614"
-                    github="https://www.google.com/"
-                    discord="https://www.google.com/"
-                    instagram="https://www.google.com/"
-                  />
-                  <AboutUsItem
-                    foto="https://www.w3schools.com/html/pic_trulli.jpg"
-                    nama="Axel Reginald Wiranto"
-                    nim="00000078456"
-                    github="https://www.google.com/"
-                    discord="https://www.google.com/"
-                    instagram="https://www.google.com/"
-                  />
+                <div className="flex justify-center">
+                  <div class="relative bottom-[10rem] lg:bottom-auto mx-0 lg:mx-10 flex flex-wrap justify-center items-center scale-75 lg:scale-100 gap-3 lg:gap-2">
+                    <AboutUsItem
+                      foto={require("../assets/Batara.png")}
+                      nama="Batara Hotdo Horas Simbolon"
+                      nim="00000078626"
+                      github="https://www.github.com/batarah07d0"
+                      discord="https://discord.com/users/LEGION#1951"
+                      instagram="http://www.instagram.com/batara.hotdo"
+                    />
+                    <AboutUsItem
+                      foto={require("../assets/Efri.png")}
+                      nama="Efri Ramadhan"
+                      nim="00000078662"
+                      github="https://github.com/efriramadhan"
+                      discord="https://discord.com/users/Efri#5854"
+                      instagram="https://www.instagram.com/efrir_/"
+                    />
+                    <AboutUsItem
+                      foto={require("../assets/Dikez.png")}
+                      nama="Raphael Dikstra Satya Prameswara"
+                      nim="00000078564"
+                      github="https://github.com/Rekmast"
+                      discord="https://discord.com/users/wiuwiu#7300"
+                      instagram="https://www.instagram.com/rdyzee_983/"
+                    />
+                    <AboutUsItem
+                      foto={require("../assets/Dzaky.png")}
+                      nama="Dzaky Fatur Rahman"
+                      nim="00000089614"
+                      github="https://github.com/dzaky2636"
+                      discord="https://discord.com/users/-Key-#1906"
+                      instagram="https://www.instagram.com/dzakyfaturr/"
+                    />
+                    <AboutUsItem
+                      foto={require("../assets/Axel.png")}
+                      nama="Axel Reginald Wiranto"
+                      nim="00000078456"
+                      github="https://github.com/mOdrA40"
+                      discord="https://discord.com/users/Mossad#0636"
+                      instagram="https://www.instagram.com/axel_modra40/"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,7 +178,7 @@ export function AboutUs() {
         </div>
       </div>
       {/* Footer */}
-      <div className="bg-[#5E60CE] text-white py-1">
+      <div className="bg-[#5E60CE] text-white py-10">
         <footer class="m-4">
           <hr className="border-white" />
           <div class="w-full max-w-screen-xl mx-auto p-4 ">
@@ -184,9 +191,9 @@ export function AboutUs() {
               </div>
               <div>
                 <span class="hidden lg:inline text-md lg:text-2xl font-semibold ">
-                  © 2023 Kelompok 2™. All Rights Reserved.
+                  © 2023 Kelompok 2™ . All Rights Reserved.
                 </span>
-                <span class="inline lg:hidden text-sm lg:text-2xl font-semibold ">
+                <span class="inline lg:hidden text-md lg:text-2xl font-semibold ">
                   © 2023 Kelompok 2™
                 </span>
               </div>
