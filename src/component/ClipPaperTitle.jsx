@@ -6,10 +6,10 @@ export function ClipPaperTitle(props) {
       <div className="flex justify-center">
         <img
           src={clippaper}
-          className="h-[45vw] md:h-[25vw] pointer-events-auto"
+          className="h-[45vw] md:h-[15vw] pointer-events-auto"
         ></img>
       </div>
-      <h1 className="absolute text-[7vw] md:text-[6vh] overlay-text text-black">
+      <h1 className="absolute text-[7vw] md:text-[5vh] overlay-text text-black">
         {props.title}
       </h1>
     </div>

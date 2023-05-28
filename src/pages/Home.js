@@ -56,7 +56,7 @@ export function Home() {
             {/* How To */}
             <div className="">
               <ClipPaperTitle title="How To" />
-              <div className="VideoPlayer relative h-0 w-full pb-[56.25%]">
+              <div className="VideoPlayer relative h-0 w-full pb-[56.25%] lg:scale-75">
                 <HowTo />
               </div>
             </div>
