@@ -141,14 +141,14 @@ export function Home() {
                     className="lg:hover:-translate-y-4 lg:hover:-translate-x-5"
                     src={general}
                     title="General Knowledge"
-                    description="Uji kemampuanmu dalam ilmu sains!"
+                    description="Contains random questions but are still general questions that are still easy to answer."
                     link="/play/general"
                   />
                   <SelectModeCard
                     className="lg:hover:-translate-y-4 lg:hover:translate-x-5"
                     src={geo}
                     title="Geography"
-                    description="Uji kemampuanmu dalam ilmu sains!"
+                    description="Contains questions about geography that can hone your skills in geography."
                     link="/play/geography"
                   />
                 </div>
@@ -157,14 +157,16 @@ export function Home() {
                     className="lg:hover:translate-y-4 lg:hover:-translate-x-5"
                     src={film}
                     title="Film"
-                    description="Uji kemampuanmu dalam ilmu sains!"
+                    description="Are you a movie lover?
+                    Let's test your knowledge of movie-related matters!"
                     link="/play/film"
                   />
                   <SelectModeCard
                     className="lg:hover:translate-y-4 lg:hover:translate-x-5"
                     src={game}
                     title="Video Game"
-                    description="Uji kemampuanmu dalam ilmu sains!"
+                    description="Do you like playing games?
+                    Let's test your understanding of games!"
                     link="/play/videogame"
                   />
                 </div>

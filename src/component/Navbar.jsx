@@ -88,7 +88,7 @@ export function Navbar() {
               className="-m-2.5 rounded-md p-2.5 text-white hover:text-black hover:bg-[#fedf52]"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h- w-6" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -98,12 +98,12 @@ export function Navbar() {
                   <Link
                     key={item.name}
                     to={item.to}
-                    className="group -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-black hover:bg-[#fedf51]"
+                    className="group -mx-3 block rounded-lg px-3 py-2 text-lg font-semibold leading-8 text-white hover:text-black hover:bg-[#fedf51]"
                   >
-                    <div className="flex gap-2">
+                    <div className="flex gap-4">
                       <img
                         src={`${item.icon}`}
-                        className="h-6 w-6 invert group-hover:invert-0"
+                        className="h-8 w-8 invert group-hover:invert-0"
                       ></img>
                       {item.name}
                     </div>
