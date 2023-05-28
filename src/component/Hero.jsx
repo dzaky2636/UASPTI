@@ -1,5 +1,9 @@
 import "../style/index.css";
 export function Hero() {
+  const handleClick = () => {
+    const targetElement = document.getElementById("HowTo");
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div className="mx-auto max-w-2xl py-[10vh] sm:py-48 lg:py-[19vh] hover:scale-105 transition ease-in-out">
@@ -12,12 +16,12 @@ export function Hero() {
             test, you able to know more knowledge.
           </p>
           <div className="mt-10 mb-[5vw] flex items-center justify-center gap-x-6">
-            <a
-              href="#"
+            <button
               className="rounded-md bg-[#00787e] px-3.5 py-2.5 text-[1rem] font-semibold  shadow-sm hover:text-black hover:bg-[#fedf51]"
+              onClick={handleClick}
             >
               How to Play
-            </a>
+            </button>
           </div>
         </div>
       </div>

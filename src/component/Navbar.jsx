@@ -18,6 +18,11 @@ const navigation = [
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const handleClick = () => {
+    const targetElement = document.getElementById("PlayGame");
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-[#30a2a9]">
       {/* Desktop */}
@@ -61,9 +66,13 @@ export function Navbar() {
         </div>
         {/* Kanan */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button className="font font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]">
+          <Button
+            className="font font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#ce5a83]"
+            onClick={handleClick}
+          >
             Play
             <img
+              id="playButton"
               src={playButton}
               alt="Play Button"
               className="h-5 w-auto mb-1"

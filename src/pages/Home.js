@@ -54,7 +54,7 @@ export function Home() {
             {/* Hero */}
             <FlexboxBox content={<Hero />} className="mt-[5.2rem]" />
             {/* How To */}
-            <div className="">
+            <div id="HowTo">
               <ClipPaperTitle title="How To" />
               <div className="VideoPlayer relative h-0 w-full pb-[56.25%] lg:scale-75">
                 <HowTo />
@@ -133,7 +133,7 @@ export function Home() {
             </svg>
           </div>
           <div className="-mt-1 scale-100">
-            <div className="container mx-auto">
+            <div id="PlayGame" className="container mx-auto">
               <ClipPaperTitle title="Select Mode" />
               <div id="selectmode" className="mx-4">
                 <div className="flex flex-col lg:flex-row gap-5 justify-center">
