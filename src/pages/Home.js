@@ -46,7 +46,7 @@ export function Home() {
 		<div className="text-white flex flex-col">
 			{/* Bagian 1 */}
 			<Navbar />
-			<div className="bg-gradient-to-b from-[#48CAE4] to-[#CAF0F8] h-[88rem] lg:h-[140rem]  mt-10">
+			<div className="bg-gradient-to-b from-[#48CAE4] to-[#CAF0F8] h-[88rem] lg:h-[140rem] mt-10">
 				<div className="bgPage w-full h-[88rem] lg:h-[140rem] z-0"></div>
 				{/* Flexbox grid */}
 				<div className="container mx-auto scale-100">
@@ -56,7 +56,7 @@ export function Home() {
 						{/* How To */}
 						<div id="HowTo">
 							<ClipPaperTitle title="How To" />
-							<div className="VideoPlayer relative h-0 w-full pb-[56.25%] lg:scale-75">
+							<div className="VideoPlayer relative h-[10px] w-full pb-[56.25%]">
 								<HowTo />
 							</div>
 						</div>
@@ -119,7 +119,7 @@ export function Home() {
 				</div>
 				{/* Bagian 3 */}
 				<div className="relative bottom-[15rem] lg:bottom-[25.5rem] bg-gradient-to-t from-[#CAF0F8] to-[#48CAE4]">
-					<div className="bgPage w-full h-[30rem] lg:h-[150rem] z-0"></div>
+					<div className="bgPage w-full h-[30rem] lg:h-[120rem] z-0"></div>
 					<div className="scale-100">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 							<path
@@ -128,41 +128,37 @@ export function Home() {
 								d="M0,256L48,240C96,224,192,192,288,197.3C384,203,480,245,576,229.3C672,213,768,139,864,112C960,85,1056,107,1152,144C1248,181,1344,235,1392,261.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
 						</svg>
 					</div>
-					<div className="-mt-1 scale-100">
+					<div className="scale-100">
 						<div id="PlayGame" className="container mx-auto">
 							<ClipPaperTitle title="Select Mode" />
-							<div id="selectmode" className="mx-4">
-								<div className="flex flex-col lg:flex-row gap-5 justify-center">
+							<div id="selectmode">
+								<div className="flex flex-col lg:flex-row justify-center">
 									<SelectModeCard
-										className="lg:hover:-translate-y-4 lg:hover:-translate-x-5"
+										className="lg:hover:-translate-y-4"
 										src={general}
 										title="General Knowledge"
-										description="Contains random questions but are still general questions that are still easy to answer."
+										description="Contains random questions but are still easy to answer."
 										link="/play/general"
 									/>
 									<SelectModeCard
-										className="lg:hover:-translate-y-4 lg:hover:translate-x-5"
+										className="lg:hover:-translate-y-4"
 										src={geo}
 										title="Geography"
-										description="Contains questions about geography that can hone your skills in geography."
+										description="Contains questions about geography that can test your skills in geography."
 										link="/play/geography"
 									/>
-								</div>
-								<div className="flex flex-col lg:flex-row gap-5 mt-5 justify-center">
 									<SelectModeCard
-										className="lg:hover:translate-y-4 lg:hover:-translate-x-5"
+										className="lg:hover:-translate-y-4"
 										src={film}
 										title="Film"
-										description="Are you a movie lover?
-                    Let's test your knowledge of movie-related matters!"
+										description="Are you a movie lover? Let's test your knowledge of movie-related matters!"
 										link="/play/film"
 									/>
 									<SelectModeCard
-										className="lg:hover:translate-y-4 lg:hover:translate-x-5"
+										className="lg:hover:-translate-y-4"
 										src={game}
 										title="Video Game"
-										description="Do you like playing games?
-                    Let's test your understanding of games!"
+										description="Do you like playing games? Let's test your understanding of games!"
 										link="/play/videogame"
 									/>
 								</div>

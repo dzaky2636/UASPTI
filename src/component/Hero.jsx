@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import bgherooverlay from "../assets/select mode bg/Movie.jpg";
 import "../style/index.css";
 
 const QuoteAPIurl = "https://type.fit/api/quotes";
@@ -31,7 +30,7 @@ export function Hero() {
 
 	return (
 		<div className="bgHero relative isolate px-6 pt-14 lg:px-8">
-			<div className="mx-auto max-w-2xl py-[10vh] sm:py-48 lg:py-[19vh] hover:scale-105 transition ease-in-out">
+			<div className="mx-auto max-w-2xl py-[5vh] sm:py-[18vh] lg:py-[15vh] hover:scale-105 transition ease-in-out">
 				<div className="text-center">
 					<h1 className="text-[10vw] font-bold tracking-tight sm:text-6xl">
 						Welcome to <span className="text-yellow-400">UQuizz!</span>
