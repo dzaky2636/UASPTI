@@ -10,10 +10,8 @@ import playButton from "../assets/play-button.png";
 
 import leaderboardData from "./leaderboard.json";
 
-const HelloGIFAPIurl =
-  "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=hello";
-const UserAvatarGIFAPIurl =
-  "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&q=cat&limit=25&offset=0&rating=g&lang=en";
+const HelloGIFAPIurl = "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=hello";
+const UserAvatarGIFAPIurl = "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&q=cat&limit=25&offset=0&rating=g&lang=en";
 
 const shuffleArray = (array) => {
   for (var i = array.length - 1; i > 0; i--) {
@@ -30,28 +28,17 @@ export function PlayQuiz() {
   var GIFAPIurl = "";
   var category = useParams();
   if (category.type == "videogame") {
-    TriviaAPIurl =
-      "https://opentdb.com/api.php?amount=25&category=15&difficulty=easy&type=multiple";
-    GIFAPIurl =
-      "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" +
-      category.type;
+    TriviaAPIurl = "https://opentdb.com/api.php?amount=25&category=15&difficulty=easy&type=multiple";
+    GIFAPIurl = "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" + category.type;
   } else if (category.type == "geography") {
-    TriviaAPIurl =
-      "https://opentdb.com/api.php?amount=25&category=22&difficulty=easy&type=multiple";
-    GIFAPIurl =
-      "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" +
-      category.type;
+    TriviaAPIurl = "https://opentdb.com/api.php?amount=25&category=22&difficulty=easy&type=multiple";
+    GIFAPIurl = "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" + category.type;
   } else if (category.type == "film") {
-    TriviaAPIurl =
-      "https://opentdb.com/api.php?amount=25&category=11&difficulty=easy&type=multiple";
-    GIFAPIurl =
-      "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" +
-      category.type;
+    TriviaAPIurl = "https://opentdb.com/api.php?amount=25&category=11&difficulty=easy&type=multiple";
+    GIFAPIurl = "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=" + category.type;
   } else {
-    TriviaAPIurl =
-      "https://opentdb.com/api.php?amount=25&category=9&difficulty=easy&type=multiple";
-    GIFAPIurl =
-      "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=cat";
+    TriviaAPIurl = "https://opentdb.com/api.php?amount=25&category=9&difficulty=easy&type=multiple";
+    GIFAPIurl = "https://api.giphy.com/v1/gifs/search?api_key=9uChRAbRWSRpdXmZ359UH06ZoRKsZX8Y&limit=25&offset=0&rating=g&lang=en&q=cat";
   }
 
   console.log(GIFAPIurl);
@@ -156,9 +143,7 @@ export function PlayQuiz() {
   // acak soal
   useEffect(() => {
     if (questions.length > 0) {
-      const choices = questions[questionIndex].incorrect_answers.concat(
-        questions[questionIndex].correct_answer
-      );
+      const choices = questions[questionIndex].incorrect_answers.concat(questions[questionIndex].correct_answer);
       const shuffled = shuffleArray(choices);
       setShuffledChoices(shuffled);
     }
@@ -176,9 +161,7 @@ export function PlayQuiz() {
     setQuizStarted(true);
   }
 
-  var choices = questions[questionIndex].incorrect_answers.concat(
-    questions[questionIndex].correct_answer
-  );
+  var choices = questions[questionIndex].incorrect_answers.concat(questions[questionIndex].correct_answer);
 
   let percentageTimer = (timer / MAXTIMER) * 100;
   var correctAnswer = questions[questionIndex].correct_answer;
@@ -211,19 +194,13 @@ export function PlayQuiz() {
       const id = unsortedLeaderboardArr.length;
       const newLeaderboardData = { id, name, score: parseInt(score), avatar };
       setLeaderboard([...unsortedLeaderboardArr, newLeaderboardData]);
-      localStorage.setItem(
-        "leaderboardData",
-        JSON.stringify([...unsortedLeaderboardArr, newLeaderboardData])
-      );
+      localStorage.setItem("leaderboardData", JSON.stringify([...unsortedLeaderboardArr, newLeaderboardData]));
     } else {
       const unsortedLeaderboardArr = JSON.parse(localStorageLeaderboard);
       const id = unsortedLeaderboardArr.length;
       const newLeaderboardData = { id, name, score: parseInt(score), avatar };
       setLeaderboard([...unsortedLeaderboardArr, newLeaderboardData]);
-      localStorage.setItem(
-        "leaderboardData",
-        JSON.stringify([...unsortedLeaderboardArr, newLeaderboardData])
-      );
+      localStorage.setItem("leaderboardData", JSON.stringify([...unsortedLeaderboardArr, newLeaderboardData]));
     }
 
     window.location.href = "/leaderboard";
@@ -254,24 +231,13 @@ export function PlayQuiz() {
               <div className="flex justify-center">
                 <div className="flex flex-col gap-5 justify-center">
                   <div className="flex justify-center">
-                    <img
-                      className="rounded-2xl w-[350px] border-2 border-white"
-                      src={`${HelloGIF}`}
-                      alt="GIF"
-                    />
+                    <img className="rounded-2xl w-[350px] border-2 border-white" src={`${HelloGIF}`} alt="GIF" />
                   </div>
                   <div className="flex flex-col gap-4 justify-center mx-10">
                     <div className="flex justify-center">
-                      <Button
-                        onClick={startQuiz}
-                        className="font-semibold text-3xl text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#5381e5]"
-                      >
+                      <Button onClick={startQuiz} className="font-semibold text-3xl text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#5381e5]">
                         START
-                        <img
-                          src={playButton}
-                          alt="Play Button"
-                          className="h-4 w-4 mb-1"
-                        />
+                        <img src={playButton} alt="Play Button" className="h-4 w-4 mb-1" />
                       </Button>
                     </div>
                   </div>
@@ -287,18 +253,11 @@ export function PlayQuiz() {
                 </div>
               </div>
               <div className="flex justify-center mx-10">
-                <img
-                  className="rounded-2xl w-[350px] max-h-[300px] border-2 border-white"
-                  src={`${GIF}`}
-                  alt="GIF"
-                />
+                <img className="rounded-2xl w-[350px] max-h-[300px] border-2 border-white" src={`${GIF}`} alt="GIF" />
               </div>
               <div className="flex justify-center">
                 <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mx-10">
-                  <div
-                    className="bg-green-600 h-2.5 rounded-full dark:bg-blue-500 transition ease-in-out"
-                    style={{ width: percentageTimer + "%" }}
-                  ></div>
+                  <div className="bg-green-600 h-2.5 rounded-full dark:bg-blue-500 transition ease-in-out" style={{ width: percentageTimer + "%" }}></div>
                 </div>
               </div>
               <h1
@@ -309,11 +268,7 @@ export function PlayQuiz() {
               ></h1>
               <div className="flex flex-wrap gap-4 justify-center mx-10 scale-90 lg:scale-100">
                 {shuffledChoices.map((choice, index) => (
-                  <QuizAnswerButton
-                    onClick={() => checkAnswer(index)}
-                    answer={choice}
-                    datanumber={index}
-                  />
+                  <QuizAnswerButton onClick={() => checkAnswer(index)} answer={choice} datanumber={index} />
                 ))}
               </div>
             </div>
@@ -322,27 +277,17 @@ export function PlayQuiz() {
             <div className="relative flex h-screen justify-center gap-4 scale-100 md:scale-90 lg:scale-100 xl:scale-100 2xl:scale-100">
               <div className="flex flex-col gap-5 justify-center">
                 <div className="flex justify-center mx-10">
-                  <img
-                    className="rounded-2xl w-[350px] border-2 border-white"
-                    src={`${AvatarGIF}`}
-                    alt="GIF"
-                  />
+                  <img className="rounded-2xl w-[350px] border-2 border-white" src={`${AvatarGIF}`} alt="GIF" />
                 </div>
                 <div className="flex flex-col gap-4 justify-center mx-10">
                   <div className="flex justify-center">
                     <div className="bg-white rounded-full p-2 px-7 lg:px-12">
-                      <div className="text-md lg:text-xl">
-                        Score akhir anda: {score}
-                      </div>
+                      <div className="text-md lg:text-xl">Score akhir anda: {score}</div>
                     </div>
                   </div>
                   <form onSubmit={handleSubmit}>
                     <input type="hidden" name="score" value={score}></input>
-                    <input
-                      type="hidden"
-                      name="AvatarGIF"
-                      value={AvatarGIF}
-                    ></input>
+                    <input type="hidden" name="AvatarGIF" value={AvatarGIF}></input>
                     <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="username"
@@ -356,10 +301,7 @@ export function PlayQuiz() {
                     ></input>
                     {inputValue.length > 0 && (
                       <div className="flex justify-center">
-                        <Button
-                          type="submit"
-                          className="mt-4 font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#5381e5]"
-                        >
+                        <Button type="submit" className="mt-4 font-semibold text-sm text-white hover:text-black hover:bg-[#fedf52] flex items-center gap-2 bg-[#5381e5]">
                           SUBMIT
                         </Button>
                       </div>
